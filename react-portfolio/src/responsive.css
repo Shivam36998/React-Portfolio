@@ -1,0 +1,127 @@
+/* For Tablets (landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+  .home{
+    height: 80vh;
+  }
+  .home_intro_area p {
+    width: 90%;
+  }
+
+  .home_intro_area button {
+    font-size: 1rem;
+  }
+
+  .home_image_area,
+  .home_image_circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home_masked_profile {
+    margin-top: -60px;
+  }
+
+  .home_icon {
+    font-size: 0.6rem;
+  }
+
+  .about_left_div img {
+    width: 20vw;
+  }
+
+  .about_right_div {
+    width: 55vw;
+  }
+
+  .about_lower_row,
+  .about_lower_first_row,
+  .about_lower_second_row {
+    flex-direction: column;
+  }
+}
+
+/* For Phones */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .home{
+    height: 80vh;
+    margin-bottom: 0;
+  }
+  .home_intro_area p {
+    width: 100%;
+  }
+
+  .home_intro_area button {
+    font-size: 1rem;
+  }
+
+  .home_image_area{
+    width: 200px;
+    height: 500px;
+  }
+  .home_image_circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home_masked_profile {
+    margin-top: -40px;
+  }
+
+  .home_icon {
+    font-size: 0.5rem;
+  }
+
+  .about{
+    height: 80vh;
+  }
+
+  .about_left_div img {
+    width: 100%;
+  }
+
+  .about_right_div {
+    width: 50%;
+  }
+
+  .education{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: fit-content;
+  }
+
+  .ed_description{
+    width: 80%;
+  }
+
+  .education_timeline {
+    height: 50vh;
+  }
+
+  .project_card {
+    width: 100%;
+  }
+
+  .project_all_button {
+    margin-left: 75%;
+  }
+
+  .project_fc_left_div,
+  .project_fc_right_div {
+    width: 100%;
+  }
+
+  .project_fc_image {
+    margin-top: -1rem;
+  }
+}
