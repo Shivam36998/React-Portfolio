@@ -9,22 +9,25 @@ import Project from './components/Project';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import './light.css'
+import './responsive.css'
+import SingleProject from './parts/SingleProject';
+import Experience from './components/Experience';
 
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/edu" element={<Education />} />
-          <Route path="/skill" element={<Skill />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/footer" element={<Footer />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/edu" element={<Education />} />
+        <Route path="/exp" element={<Experience />} />
+        <Route path="/skill" element={<Skill />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/singleProject" element={<SingleProject />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }

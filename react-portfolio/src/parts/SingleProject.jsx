@@ -3,8 +3,14 @@
 import React, { useState } from "react";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { Category } from "@mui/icons-material";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const SingleProject = (props) => {
+const SingleProject = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  console.log(location.state);
+
   const {
     id,
     name,
@@ -16,13 +22,13 @@ const SingleProject = (props) => {
     link,
     frontImage,
     images,
-  } = props.fullCardData;
+  } = location.state;
   return (
     <div>
       <div className="project_fc">
         <CancelIcon
           className="cancalIcon"
-          onClick={() => props.setProjectSelect(false)}
+          onClick={() => navigate("/project")}
         />
         <div className="project_fc_left_div">
           <img

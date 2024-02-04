@@ -27,12 +27,14 @@ const Home = () => {
           <IconCards
             icon={<CloudDownloadIcon />}
             text={"DownLoad Resume"}
-            link={"https://drive.google.com/file/d/1znHWJS6fgoGC4rj9tWQb257wpH4Orzd0/view?usp=sharing"}
+            link={
+              "https://drive.google.com/file/d/1znHWJS6fgoGC4rj9tWQb257wpH4Orzd0/view?usp=sharing"
+            }
           />
           <IconCards
             icon={<WebStoriesIcon />}
             text={"Go to Projects"}
-            link="#project"
+            link="/project"
           />
         </div>
       </div>

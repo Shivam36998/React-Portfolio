@@ -83,8 +83,8 @@ const Skill = () => {
           </div>
         </div>
       </div>
-      <div className="skill_bubble_area">
-        {/* <div
+      {/*  <div className="skill_bubble_area">
+       <div
           className="skill_bubble_transparent"
           style={{ top: "3rem", right: "2.5rem" }}>
           Node
@@ -203,8 +203,8 @@ const Skill = () => {
           className="skill_bubble_dark"
           style={{ top: "22rem", right: "60rem" }}>
           Redux
-        </div> */}
-      </div>
+        </div>
+      </div>*/}
     </div>
   );
 };

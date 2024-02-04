@@ -27,13 +27,16 @@
   box-sizing: border-box;
   background-color: transparent;
 }
-
+#root {
+  min-height: 100vh;
+}
 body {
   height: max-content;
   z-index: -2;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   background-color: var(--background) !important;
+  min-height: 100vh;
 }
 
 h1,
@@ -123,7 +126,7 @@ a {
 .home {
   display: flex;
   justify-content: space-evenly;
-  height: calc(95vh);
+  min-height: 100vh;
 }
 
 .home_intro_area {
@@ -131,7 +134,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
 }
 
 .home_intro_area p {
@@ -155,7 +157,7 @@ a {
   height: calc(100vh - 72px);
   display: flex;
   align-items: flex-end;
-  margin-top: -10vh;
+  margin-top: -15vh;
   background: var(--background-gradient-mask);
   z-index: -1;
 }
@@ -209,7 +211,7 @@ a {
 /* About styles using variables */
 
 .about_main_div {
-  height: 90vh;
+  /* height: 90vh; */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -220,7 +222,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .about_left_div {
@@ -244,12 +246,12 @@ a {
 }
 
 .about_right_div {
-  height: 70vh;
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-right: 8rem;
   overflow-y: scroll;
+  margin: auto;
 }
 
 .about_right_div h1 {
@@ -429,12 +431,89 @@ a {
   cursor: pointer;
 }
 
+/* Experience */
+
+.exp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.exp h1,
+.exp h6 {
+  color: var(--black);
+  margin: 3px 20px;
+}
+.exp h1 {
+  margin-top: 3rem;
+}
+.exp_list_area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.exp_item {
+  width: 70%;
+  display: flex;
+  gap: 3rem;
+}
+.exp_timeline_icon {
+  margin-top: 2.5rem;
+}
+.exp_timeline_icon svg {
+  font-size: 4rem !important;
+  color: var(--dark-blue);
+}
+.exp_card {
+  background-color: var(--dark-blue);
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  width: 90%;
+}
+.exp_card_second_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp_card div p,
+.exp_card div ul li {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.exp_card div ul {
+  /* background-color: #00000035; */
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border-top: 1px solid var(--background);
+}
+
+.exp_background_line {
+  height: 100%;
+  width: 3px;
+  background-color: var(--dark-blue);
+  position: absolute;
+  left: 17%;
+}
+.exp_links {
+  margin: 0 5px;
+  color: var(--text-light);
+  font-size: 1rem;
+}
 /* Skill styles using variables */
 
 .skill {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  height: max-content;
   align-items: center;
   justify-content: space-around;
   padding: 3vh 0;
@@ -448,18 +527,23 @@ a {
 }
 
 .skill_list_area {
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: max-content;
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  position: absolute;
+  margin: auto;
+  padding: auto;
+  /* position: absolute; */
 }
 
 .skill_list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   gap: 30px;
 }
 
@@ -856,151 +940,23 @@ a {
 /* footer */
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--dark-blue);
   color: var(--text-light);
+  background-color: var(--dark-blue);
   padding: 3px 0;
 }
-
-/*  */
-/* Responsive Styles */
-@media screen and (max-width: 450px) {
-  .home {
-    flex-direction: column-reverse;
-    height: auto;
-    width: 100vw;
-  }
-  .home_image_area {
-    height: 60vh;
-    margin: 0 auto;
-    margin-top: 0;
-  }
-  .home_intro_area {
-    width: 90%;
-    margin: 1rem;
-    font-size: smaller;
-  }
-  .home_intro_area p {
-    width: 100%;
-  }
-  
-  .about_left_div {
-    display: none;
-  }
-  .about_right_div {
-    width: 100%;
-    height: 90vh;
-    overflow-y: scroll;
-    margin-right: 0;
-    padding: 1rem;
-    margin-top: 10vh;
-  }
-  .about_lower_first_row {
-    flex-direction: column;
-  }
-
-
-  .ed_main_row {
-    flex-direction: column;
-    height: max-content;
-  }
-  .education_timeline {
-    width: 100%;
-    font-size: 0.8rem;
-    height: 30vh;
-  }
-  .ed_edFullBox {
-    width: 90%;
-    height: auto;
-    margin: 2rem 0;
-  }
-  .skill_list_area {
-    width: 100%;
-  }
-  .skill_list {
-    flex-direction: column;
-  }
-  .skill_category {
-    width: 90%;
-  }
-  .projects_area {
-    flex-direction: column;
-    height: auto;
-  }
-  .project_card {
-    width: 100%;
-  }
-  .project_fc {
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    margin-top: 5rem;
-  }
-  .project_fc_image {
-    width: 100%;
-    height: auto;
-  }
-  .project_fc_left_div {
-    width: 100%;
-    height: auto;
-  }
-  .project_button_box {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 0;
-  }
-  .project_fc_right_div {
-    width: 100%;
-    height: auto;
-  }
-  .project_fc_right_div .project_tags {
-    padding: 5px 0;
-  }
-  .cancalIcon {
-    top: -4rem;
-    right: 0.5rem;
-  }
-  .contact {
-    flex-direction: column;
-    justify-content: space-between;
-    height: auto;
-    padding: 3rem 0;
-    gap: 3rem;
-  }
-  .contact_left_div {
-    width: 90%;
-    height: auto;
-    padding: 1rem;
-    font-size: small;
-    gap: 10px;
-  }
-  .contact_right_div {
-    width: 100%;
-    height: auto;
-  }
-  .contact_mail_button,
-  .resume_button,
-  .contact_send_message {
-    margin: 0;
-    padding: 4px;
-    font-size: 1.15rem;
-  }
-  .resume_button,
-  .contact_send_message {
-    padding: 10px;
-  }
-  .contact_social_media {
-    align-items: center;
-  }
-  .contact_right_div {
-    width: 100%;
-  }
-  .contact_right_div form {
-    width: 90%;
-    margin: auto;
-  }
+.footer_navigation_links {
+  display: none;
+  color: var(--text-light);
+}
+.footer_navigation_links span {
+  margin: 0.2rem 2rem;
+}
+.footer_navigation_links span a {
+  color: whitesmoke;
+  font-size: 0.8rem;
+}
+.footerLastLine {
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
 }

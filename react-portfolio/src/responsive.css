@@ -1,9 +1,14 @@
-/* For Tablets (landscape) */
+/**
+ * For Tablets (landscape)
+ *
+ * @format
+ */
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 14px;
   }
-  .home{
+  .home {
     height: 80vh;
   }
   .home_intro_area p {
@@ -43,85 +48,180 @@
   }
 }
 
-/* For Phones */
-@media only screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+/* for phones */
+@media screen and (max-width: 450px) {
+  .home {
+    flex-direction: column-reverse;
+    height: auto;
+    width: 100vw;
   }
-  .home{
-    height: 80vh;
-    margin-bottom: 0;
+  .home_image_area {
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: -5vh;
+  }
+  .home_intro_area {
+    width: 90%;
+    margin: 1rem;
+    font-size: smaller;
   }
   .home_intro_area p {
     width: 100%;
   }
-
-  .home_intro_area button {
-    font-size: 1rem;
+  .home_icons {
+    margin-bottom: 0;
+  }
+  .about_left_div {
+    display: none;
+  }
+  .about_right_div {
+    width: 100%;
+    overflow-y: scroll;
+    margin-right: 0;
+    padding: 1rem;
+    margin-top: 4vh;
+  }
+  .about_lower_first_row {
+    flex-direction: column;
   }
 
-  .home_image_area{
-    width: 200px;
-    height: 500px;
+  .ed_main_row {
+    flex-direction: column;
+    height: max-content;
   }
-  .home_image_circle {
-    width: 200px;
-    height: 200px;
+  .education_timeline {
+    width: 100%;
+    font-size: 0.8rem;
+    height: 30vh;
   }
-
-  .home_masked_profile {
-    margin-top: -40px;
+  .ed_edFullBox {
+    width: 90%;
+    height: auto;
+    margin: 2rem 0;
   }
-
-  .home_icon {
-    font-size: 0.5rem;
-  }
-
-  .about{
-    height: 80vh;
-  }
-
-  .about_left_div img {
+  .skill_list_area {
     width: 100%;
   }
-
-  .about_right_div {
-    width: 50%;
-  }
-
-  .education{
-    margin-top: 5rem;
-    display: flex;
+  .skill_list {
     flex-direction: column;
-    gap: 2rem;
-    height: fit-content;
+  }
+  .skill_category {
+    width: 90%;
   }
 
-  .ed_description{
-    width: 80%;
+  .exp_list_area {
+    padding: 1rem;
+  }
+  .exp_item {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  .exp_timeline_icon svg {
+    font-size: 2rem !important;
+    display: none;
+  }
+  .exp_card h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .exp_card_second_row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .exp_card_second_row h3 {
+    font-size: 1.3rem;
+    margin: 0.3rem;
+  }
+  .exp_card_second_row p {
+    margin-bottom: 3px;
   }
 
-  .education_timeline {
-    height: 50vh;
+  .projects_area {
+    flex-direction: column;
+    height: auto;
   }
-
   .project_card {
     width: 100%;
   }
-
-  .project_all_button {
-    margin-left: 75%;
+  .project_fc {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-top: 5rem;
   }
-
-  .project_fc_left_div,
+  .project_fc_image {
+    width: 100%;
+    height: auto;
+  }
+  .project_fc_left_div {
+    width: 100%;
+    height: auto;
+  }
+  .project_button_box {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+  }
   .project_fc_right_div {
     width: 100%;
+    height: auto;
   }
-
-  .project_fc_image {
-    margin-top: -1rem;
+  .project_fc_right_div .project_tags {
+    padding: 5px 0;
+  }
+  .cancalIcon {
+    top: -4rem;
+    right: 0.5rem;
+  }
+  .contact {
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    padding: 3rem 0;
+    gap: 3rem;
+  }
+  .contact_left_div {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    font-size: small;
+    gap: 10px;
+  }
+  .contact_right_div {
+    width: 100%;
+    height: auto;
+  }
+  .contact_mail_button,
+  .resume_button,
+  .contact_send_message {
+    margin: 0;
+    padding: 4px;
+    font-size: 1.15rem;
+  }
+  .resume_button,
+  .contact_send_message {
+    padding: 10px;
+  }
+  .contact_social_media {
+    align-items: center;
+  }
+  .contact_right_div {
+    width: 100%;
+  }
+  .contact_right_div form {
+    width: 90%;
+    margin: auto;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer_navigation_links {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
   }
 }

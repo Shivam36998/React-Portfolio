@@ -26,6 +26,10 @@
   text-decoration: none;
   cursor: pointer;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
 }
 .navAreaListItem:hover {
   font-weight: 700;
@@ -40,8 +44,17 @@
   color: rgb(229, 96, 96);
   text-decoration: underline;
 }
+.sideIcon {
+  color: var(--black);
+}
 .menuIcon {
   display: none;
+  color: var(--black);
+  margin: 0 10px;
+}
+.navRightPart {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 450px) {
@@ -58,6 +71,10 @@
     background-color: #3a3a3a;
     margin: 1rem 1rem;
     padding: 1rem 3rem;
+    z-index: 100;
+  }
+  .navAreaListItem a{
+    color: var(--text-light);
   }
   .menuIcon {
     display: inline;

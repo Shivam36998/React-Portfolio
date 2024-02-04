@@ -10,9 +10,9 @@ import { Menu } from "@mui/material";
 
 const Navbar = () => {
   let [lightMode, setLightMode] = useState(true);
-  let [listShow, setListShow] = useState(window.screen.width > 450 ? true : false);
-
-  console.log(window.screen.width);
+  let [listShow, setListShow] = useState(
+    window.screen.width > 450 ? true : false
+  );
 
   const handleTheme = () => {
     const root = document.documentElement;
@@ -54,49 +54,96 @@ const Navbar = () => {
 
     setLightMode(!lightMode);
   };
+
+  const clickHandler = () => {
+    console.log("here");
+    if (window.screen.width < 450) setListShow(false);
+  };
+
   return (
     <div className={styles.NavArea}>
-      <div className="sideIcon">Welcome</div>
-      <div
-        className={styles.menuIcon}
-        onClick={() => setListShow(!listShow)}>
-        {listShow ? <CloseTwoTone /> : <MenuTwoTone />}
-      </div>
-      <ul
-        className={styles.navAreaListItems}
-        style={listShow ? { display: "flex" } : { display: "none" }}>
-        <li className={styles.navAreaListItem}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
-          <Link to="/about">About Me</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
-          <Link to="/edu">Education</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
-          <Link to="/skill">Skills</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
-          <Link to="/project">Projects</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
-          <Link to="/">Achievements</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
-          <Link to="/contact">Contact Me</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
-          <Link to="/">Hobby Glimpse</Link>
-        </li>
-        <li className={styles.navAreaListItem}>
+      <div className={styles.sideIcon}>Welcome</div>
+      <div className={styles.navRightPart}>
+        <div
+          className={styles.menuIcon}
+          onClick={() => setListShow(!listShow)}>
+          {listShow ? <CloseTwoTone /> : <MenuTwoTone />}
+        </div>
+        <ul
+          className={styles.navAreaListItems}
+          style={listShow ? { display: "flex" } : { display: "none" }}>
+          <li className={styles.navAreaListItem}>
+            <Link
+              to="/"
+              onClick={() => {
+                clickHandler();
+              }}>
+              Home
+            </Link>
+          </li>
+          <li className={styles.navAreaListItem}>
+            <Link
+              to="/about"
+              onClick={() => {
+                clickHandler();
+              }}>
+              About Me
+            </Link>
+          </li>
+          <li className={styles.navAreaListItem}>
+            <Link
+              to="/edu"
+              onClick={() => {
+                clickHandler();
+              }}>
+              Education
+            </Link>
+          </li>
+          <li className={styles.navAreaListItem}>
+            <Link
+              to="/skill"
+              onClick={() => {
+                clickHandler();
+              }}>
+              Skills
+            </Link>
+          </li>
+          <li className={styles.navAreaListItem}>
+            <Link
+              to="/project"
+              onClick={() => {
+                clickHandler();
+              }}>
+              Projects
+            </Link>
+          </li>
+          <li className={styles.navAreaListItem}>
+            <Link
+              to="/exp"
+              onClick={() => {
+                clickHandler();
+              }}>
+              Experience
+            </Link>
+          </li>
+          <li className={styles.navAreaListItem}>
+            <Link
+              to="/contact"
+              onClick={() => {
+                clickHandler();
+              }}>
+              Contact Me
+            </Link>
+          </li>
+        </ul>
+        <div className={styles.navAreaListItem}>
           {lightMode ? (
             <DarkModeIcon onClick={handleTheme} />
           ) : (
             <LightModeIcon onClick={handleTheme} />
           )}
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   );
 };

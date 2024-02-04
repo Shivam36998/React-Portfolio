@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import CancelIcon from "@mui/icons-material/Cancel";
+import { useNavigate } from "react-router-dom";
 
-const Projects = (props) => {
+const Projects = () => {
   let projects = [
     {
       id: "1",
@@ -155,6 +156,9 @@ const Projects = (props) => {
   let [projectList, setProjectList] = useState(projects);
 
   let [isProjectAll, setIsProjectAll] = useState(false);
+
+  const navigate = useNavigate();
+
   const projectAllHandler = () => {
     document.querySelector(".projects_area").style.height = "auto";
     setIsProjectAll(true);
@@ -165,8 +169,7 @@ const Projects = (props) => {
   };
 
   const passCardData = (data) => {
-    props.setFullCardData(data);
-    props.setProjectSelect(true);
+    navigate("/singleProject", { state: data });
   };
 
   const FrontCard = (props) => {
