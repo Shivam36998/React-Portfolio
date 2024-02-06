@@ -114,7 +114,7 @@ const Experience = () => {
       company: "Career Council, IIT BHU",
       date: "June 2023 - March 2023",
       description: [
-        "Led a 25-member team to success",
+        "Led a 25-member team ",
         "Spearheaded initiatives like acing placements, acing internships, encore, and chit chat with seniors",
         "Played a pivotal role in enhancing career-related programs and resources within the department.",
       ],

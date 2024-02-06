@@ -101,14 +101,27 @@
   }
   .skill_list_area {
     width: 100%;
+    padding: 25px;
   }
   .skill_list {
+    width: 100%;
     flex-direction: column;
   }
   .skill_category {
-    width: 90%;
+    width: 100%;
   }
-
+  .skill_category div{
+    margin: 0;
+    padding: 0;
+  }
+  .skill_category div ul{
+    margin: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .skill_category div li{
+    margin: .4rem !important;
+  }
   .exp_list_area {
     padding: 1rem;
   }

@@ -8,59 +8,135 @@ const Skill = () => {
       id="skill"
       className="skill">
       <div className="skill_list_area">
-        <h1
-          className="skill_heading text_normal">
-          Skills
-        </h1>
+        <h1 className="skill_heading text_normal">Skills</h1>
         <div className="skill_list">
           <div className="skill_category">
             <h4>Programming Language</h4>
-            <div className="text_blue">
+            <div className="">
               <ul>
-                <li>C</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>Javascript</li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                    alt="C"
+                  />
+                  <span>C</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                    alt="C++"
+                  />
+                  <span>C++</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    alt="Python"
+                  />
+                  <span>Python</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="Javascript"
+                  />
+                  <span>Javascript</span>
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="skill_category">
             <h4>Frameworks and Libraries</h4>
-            <div className="text_blue">
+            <div className="">
               <ul>
-                <li>React Js</li>
-                <li>Node JS</li>
-                <li>Express Js</li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React Js"
+                  />
+                  <span>React Js</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    alt="Node JS"
+                  />
+                  <span>Node JS</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                    alt="Express Js"
+                  />
+                  <span>Express Js</span>
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="skill_category">
             <h4>Database, Tools and Language</h4>
-            <div className="text_blue">
+            <div className="">
               <ul>
-                <li>MongoDB</li>
-                <li>SQL</li>
-                <li>Excel</li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                    alt="MongoDB"
+                  />
+                  <span>MongoDB</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                    alt="PostgreSQL"
+                  />
+                  <span>PostgreSQL</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="/skillImages/excellogo.svg"
+                    alt="Microsoft Excel"
+                    style={{ width: "32px", height: "32px" }}
+                  />
+                  <span>Excel</span>
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="skill_category">
             <h4>Version Control Tools and IDE</h4>
-            <div className="text_blue">
+            <div className="">
               <ul>
-                <li>Git</li>
-                <li>Github</li>
-                <li>VS Code</li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    alt="Git"
+                  />
+                  <span>Git</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                    alt="Github"
+                  />
+                  <span>Github</span>
+                </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                    alt="VS Code"
+                  />
+                  <span>VS Code</span>
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="skill_category">
             <h4>Interests</h4>
-            <div className="text_blue">
+            <div className="">
               <ul>
                 <li>Software Development</li>
                 <li>Full Stack Development</li>
@@ -72,7 +148,7 @@ const Skill = () => {
 
           <div className="skill_category">
             <h4>Soft Skills</h4>
-            <div className="text_blue">
+            <div className="">
               <ul>
                 <li>Communication</li>
                 <li>Leadership</li>
@@ -83,128 +159,6 @@ const Skill = () => {
           </div>
         </div>
       </div>
-      {/*  <div className="skill_bubble_area">
-       <div
-          className="skill_bubble_transparent"
-          style={{ top: "3rem", right: "2.5rem" }}>
-          Node
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "10rem", right: "12rem" }}>
-          HTML
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "6rem", right: "25rem" }}>
-          C++
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "13rem", right: "35rem" }}>
-          Git
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "18rem", right: "45rem" }}>
-          SASS
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "23rem", right: "55rem" }}>
-          React Js
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "28rem", right: "65rem" }}>
-          Docker
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "30rem", right: "70rem" }}>
-          JS
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "22rem", right: "5rem" }}>
-          Vue.js
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "8rem", right: "18rem" }}>
-          MongoDB
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "16rem", right: "29rem" }}>
-          Mongoose
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "5rem", right: "42rem" }}>
-          Express
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "27rem", right: "2rem" }}>
-          SQL
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "28rem", right: "26rem" }}>
-          Python
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "17rem", right: "2rem" }}>
-          Github
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "15rem", right: "22rem" }}>
-          Next Js
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "5rem", right: "27rem" }}>
-          Express
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "20rem", right: "15rem" }}>
-          JavaScript
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "25rem", right: "8rem" }}>
-          CSS
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "17rem", right: "45rem" }}>
-          Jira
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "30rem", right: "22rem" }}>
-          REST API
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "27rem", right: "40rem" }}>
-          Angular
-        </div>
-        <div
-          className="skill_bubble_transparent"
-          style={{ top: "7rem", right: "50rem" }}>
-          TypeScript
-        </div>
-        <div
-          className="skill_bubble_dark"
-          style={{ top: "22rem", right: "60rem" }}>
-          Redux
-        </div>
-      </div>*/}
     </div>
   );
 };

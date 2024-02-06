@@ -1,20 +1,20 @@
 /** @format */
 
 :root {
-  --primary-blue: #3b57f4;
-  --light-blue: #98e4ff;
-  --medium-blue: #80b3ff;
-  --dark-blue: #687eff;
-  --text-light: #fff;
-  --background: #fff;
-  --black: #000;
-  --background-light: "images/bglight.svg";
+  --primary-color: #3b57f4;
+  --secondary-color: #80b3ff;
+  --tertiary-color: #3b57f4;
+  --dark-primary: #687eff;
+  --text: #fff; /* White */
+  --background: whitesmoke; /* White */
+  --black: #131313; /* DarkGray */
+  --background-light: #f9f9f9; /* LightGray */
   --background-gradient-mask: linear-gradient(
     to bottom,
-    #5e9efd94 15%,
+    --primary-color 15%,
     transparent 85%
   );
-  --background-transparent: #5e9efdb4;
+  --background-transparent: #3a3a3a;
   /* --background-image: url('your-background-image-path.jpg'); */
 }
 
@@ -25,7 +25,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: transparent;
 }
 #root {
   min-height: 100vh;
@@ -46,7 +45,7 @@ h3 {
 }
 
 .text_blue {
-  color: var(--primary-blue);
+  color: var(--primary-color);
 }
 
 .text_red {
@@ -62,12 +61,12 @@ h3 {
 }
 
 .text_orange {
-  color: rgb(255, 157, 0);
+  color: rgb(255, 255, 255);
 }
 
 a {
   text-decoration: none;
-  color: var(--primary-blue);
+  color: var(--primary-color);
 }
 
 .social_media_icons {
@@ -143,7 +142,7 @@ a {
 
 .home_intro_area button {
   padding: 7px 15px;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   color: #fff;
   font-size: 1.3rem;
   width: max-content;
@@ -198,12 +197,12 @@ a {
   text-align: center;
   border-radius: 8px;
   border: 2px solid var(--black);
-  color: var(--dark-blue);
+  color: var(--dark-primary);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
 }
 .home_icon:hover {
-  border: 2px solid var(--dark-blue);
+  border: 2px solid var(--dark-primary);
   color: var(--black);
   transform: scale(1.1);
 }
@@ -241,7 +240,7 @@ a {
 .about_left_div div {
   height: 2px;
   width: 100%;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   opacity: 0.3;
 }
 
@@ -255,7 +254,7 @@ a {
 }
 
 .about_right_div h1 {
-  color: var(--dark-blue);
+  color: var(--dark-primary);
   text-align: center;
 }
 
@@ -326,7 +325,7 @@ a {
 }
 /* .ed_edFullBox {
   width: 30%;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   border-radius: 1rem;
   padding: 1rem 2rem;
   margin: 0 auto;
@@ -342,7 +341,7 @@ a {
 
 .ed_edFullBox {
   width: 30%;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   border-radius: 1rem;
   padding: 1rem 2rem;
   margin: 0 auto;
@@ -376,7 +375,7 @@ a {
 .education_line {
   height: 3px;
   width: 100%;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
 }
 
 .education_timeBoxes {
@@ -405,15 +404,15 @@ a {
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  background-color: var(--light-blue);
-  border: 1px solid var(--dark-blue);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--dark-primary);
   cursor: pointer;
 }
 
 .ed_lines {
   width: 1px;
   height: 50px;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
 }
 .full_ed_button {
   width: 100%;
@@ -441,7 +440,7 @@ a {
 }
 .exp h1,
 .exp h6 {
-  color: var(--black);
+  color: black;
   margin: 3px 20px;
 }
 .exp h1 {
@@ -463,10 +462,10 @@ a {
 }
 .exp_timeline_icon svg {
   font-size: 4rem !important;
-  color: var(--dark-blue);
+  color: var(--dark-primary);
 }
 .exp_card {
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   padding: 1rem 2rem;
   margin: 1rem;
   border-radius: 1rem;
@@ -498,7 +497,7 @@ a {
 .exp_background_line {
   height: 100%;
   width: 3px;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   position: absolute;
   left: 17%;
 }
@@ -535,20 +534,22 @@ a {
   gap: 15px;
   margin: auto;
   padding: auto;
+  align-items: center;
   /* position: absolute; */
 }
 
 .skill_list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   gap: 30px;
 }
 
 .skill_category {
-  width: 30%;
+  width: 90%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -563,6 +564,28 @@ a {
 
 .skill_category div {
   padding-left: 2rem;
+}
+.skill_category div ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 3rem;
+}
+.skill_category div ul li {
+  margin: 0 1rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.skill_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.skill_item img {
+  height: 50px;
+  width: 50px;
 }
 
 .skill_bubble_area {
@@ -582,7 +605,7 @@ a {
   align-items: center;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid var(--dark-blue);
+  border: 1px solid var(--dark-primary);
 }
 
 .skill_bubble_dark {
@@ -594,7 +617,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   color: #fff;
 }
 
@@ -657,11 +680,11 @@ a {
   right: 1rem;
   font-size: 1.5rem !important;
   cursor: pointer;
-  color: var(--dark-blue);
+  color: var(--dark-primary);
 }
 
 .project_heading {
-  color: var(--primary-blue);
+  color: var(--primary-color);
 }
 
 .project_search {
@@ -669,7 +692,7 @@ a {
   color: var(--black);
   background-color: transparent;
   border: transparent;
-  border-bottom: 1px solid var(--primary-blue);
+  border-bottom: 1px solid var(--primary-color);
   font-size: 1rem;
   padding: 5px 15px;
   outline: 0;
@@ -687,7 +710,7 @@ a {
 .selectButton {
   border: transparent;
   border-radius: 3px;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   font-size: 1rem;
   margin: 4px 3px;
   padding: 3px 8px;
@@ -696,7 +719,7 @@ a {
 .selectedButton {
   border: transparent;
   border-radius: 3px;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   color: #fff;
   font-size: 1rem;
   margin: 4px 3px;
@@ -746,17 +769,17 @@ a {
 .project_card:hover .project_card_front_image {
   transform: scale(0.7);
   filter: blur(10%);
-  background-color: var(--primary-blue);
+  background-color: var(--primary-color);
 }
 
 .project_all_button {
   padding: 5px 10px;
   outline: 0;
   font-size: 1.4rem;
-  border: 1px solid var(--primary-blue);
+  border: 1px solid var(--primary-color);
   border-radius: 3px;
   cursor: pointer;
-  color: var(--primary-blue);
+  color: var(--primary-color);
   display: flex;
   justify-content: flex-end;
   margin-top: 1rem;
@@ -764,7 +787,7 @@ a {
 }
 
 .project_all_button:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   color: #fff;
   border-color: #fff;
 }
@@ -807,12 +830,12 @@ a {
   font-size: 1.2rem;
   font-weight: 500;
   padding: 0.8rem 2.5rem;
-  border: 1.5px solid var(--primary-blue);
+  border: 1.5px solid var(--primary-color);
   border-radius: 0.2rem;
 }
 
 .project_button:hover {
-  color: var(--primary-blue);
+  color: var(--primary-color);
   border-color: var(--black);
   cursor: pointer;
 }
@@ -836,7 +859,7 @@ a {
 .project_fc_right_div .project_tags {
   padding: 5px 2rem;
   margin: 1rem;
-  color: var(--dark-blue);
+  color: var(--dark-primary);
   width: 90%;
   font-size: 0.9rem;
   display: flex;
@@ -889,7 +912,7 @@ a {
   margin: 10px auto;
   padding: 10px 0;
   border: 0;
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   font-weight: bold;
   color: var(--text-light);
   border-radius: 4px;
@@ -916,7 +939,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   width: 40vw;
-  border: 2px solid var(--dark-blue);
+  border: 2px solid var(--dark-primary);
   padding: 2rem;
   border-radius: 5px;
   gap: 20px;
@@ -933,7 +956,7 @@ a {
   padding: 5px 10px;
   border: 0;
   outline: 0;
-  border-bottom: 1px solid var(--primary-blue);
+  border-bottom: 1px solid var(--primary-color);
   font-size: 1.2rem;
 }
 
@@ -941,7 +964,7 @@ a {
 .footer {
   display: flex;
   color: var(--text-light);
-  background-color: var(--dark-blue);
+  background-color: var(--dark-primary);
   padding: 3px 0;
 }
 .footer_navigation_links {
