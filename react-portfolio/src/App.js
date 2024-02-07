@@ -12,6 +12,7 @@ import './light.css'
 import './responsive.css'
 import SingleProject from './parts/SingleProject';
 import Experience from './components/Experience';
+import MailModel from './bits/MailModel';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/singleProject" element={<SingleProject />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/fixCall" element={<MailModel />} />
       </Routes>
       <Footer />
     </Router>

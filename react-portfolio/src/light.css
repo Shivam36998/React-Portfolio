@@ -5,6 +5,7 @@
   --secondary-color: #80b3ff;
   --tertiary-color: #3b57f4e3;
   --dark-primary: #687eff;
+  --light-transparent: #5b73fba8;
   --text: #f0f0f0; /* White */
   --background: whitesmoke; /* White */
   --black: #131313; /* DarkGray */
@@ -15,7 +16,6 @@
     #80b3ff 15%,
     transparent 85%
   );
-  --background-transparent: #3b57f4c1;
   /* --background-image: url('your-background-image-path.jpg'); */
 }
 
@@ -42,7 +42,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Merriweather", serif;
+  font-family: "Poppins", serif;
 }
 
 .text_blue {
@@ -165,7 +165,7 @@ a {
 .home_image_circle {
   width: 350px;
   height: 350px;
-  background-color: var(--background-transparent);
+  /* background-color: var(--light-transparent); */
   border-radius: 50%;
   overflow: hidden;
 }
