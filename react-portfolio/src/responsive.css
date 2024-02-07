@@ -4,7 +4,7 @@
  * @format
  */
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
     font-size: 14px;
   }
@@ -46,7 +46,7 @@
   .about_lower_second_row {
     flex-direction: column;
   }
-}
+} */
 
 /* for phones */
 @media screen and (max-width: 450px) {
@@ -110,17 +110,17 @@
   .skill_category {
     width: 100%;
   }
-  .skill_category div{
+  .skill_category div {
     margin: 0;
     padding: 0;
   }
-  .skill_category div ul{
+  .skill_category div ul {
     margin: 1rem;
     flex-direction: column;
     align-items: flex-start;
   }
-  .skill_category div li{
-    margin: .4rem !important;
+  .skill_category div li {
+    margin: 0.4rem !important;
   }
   .exp_list_area {
     padding: 1rem;

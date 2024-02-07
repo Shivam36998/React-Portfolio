@@ -1,0 +1,72 @@
+/** @format */
+
+.page {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 4rem auto;
+}
+.pagePart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.pagePart:first-child {
+  width: 40%;
+  flex-direction: column;
+}
+.pagePart:first-child h6 {
+  width: 80%;
+  color: var(--tertiary-color);
+}
+
+.pagePart:nth-child(2) {
+  width: 60%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  font-size: 01rem;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--tertiary-color);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 2rem 1rem;
+}
+.card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  text-align: center;
+}
+.card div:first-child {
+  font-size: xx-large;
+  font-weight: 800;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.card div span {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 630px) {
+  .page {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+  .pagePart, .pagePart:first-child, .pagePart:nth-child(2)  {
+    width: 100%;
+  }
+  .card{
+    width: 100%;
+  }
+}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import experience from "../assets/experience";
 
 const Item = ({ item }) => {
   return (
@@ -54,74 +55,7 @@ const Item = ({ item }) => {
 };
 
 const Experience = () => {
-  const all = [
-    {
-      title: "Full Stack Developer",
-      company: "Sinfolix Technologies",
-      date: "Decemeber 2023 - present",
-      description: [
-        "Two-phase internship showcased adaptability and proficiency in diverse tech stacks",
-        "Active contribution to projects (notes app, chat app) in the     initial phase, exploring technologies like Socket.IO, Toastify, and Redux.",
-        "Second phase collaboration in a team of five for Job Recruitment Portal development, enhancing technical and collaborative skills.",
-      ],
-      links: [
-        { text: "Website", link: "" },
-        { text: "Offer Letter", link: "" },
-      ],
-      projects: [
-        { text: "Job Portal", link: "" },
-        { text: "sticky Notes", link: "" },
-        { text: "Chat App", link: "" },
-        { text: "ecommerce", link: "" },
-      ],
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Jagriti",
-      date: "January 2023 - present",
-      description: [
-        "Headed a 4-member team for the Jagriti college fest website, showcasing leadership.",
-        " Managed backend operations, emphasizing CRUD functionalities for robust data management.",
-        "Executed crucial contributions to frontend development, enhancing the overall user experience.",
-      ],
-      links: [
-        { text: "Website", link: "" },
-        // { text: "POR certificate", link: "" },
-      ],
-      projects: [
-        { text: "Frontend-Client", link: "" },
-        { text: "Frontend-Admin", link: "" },
-        { text: "Backend", link: "" },
-      ],
-    },
-    {
-      title: "Technical Team Head",
-      company: "Spirit",
-      date: "January 2023 - present",
-      description: [
-        "Technical Head, Spirit, IIT BHU, leading the development of a conference website using React.",
-        "Focused on crafting a responsive and visually appealing UI to enhance user experience.",
-        "Empowering students to explore and register for diverse opportunities through the intuitive platform.",
-      ],
-      links: [
-        { text: "Website", link: "" },
-        // { text: "POR certificate", link: "" },
-      ],
-      projects: [{ text: "Github", link: "" }],
-    },
-    {
-      title: "Co-Head",
-      company: "Career Council, IIT BHU",
-      date: "June 2023 - March 2023",
-      description: [
-        "Led a 25-member team ",
-        "Spearheaded initiatives like acing placements, acing internships, encore, and chit chat with seniors",
-        "Played a pivotal role in enhancing career-related programs and resources within the department.",
-      ],
-      links: [],
-      projects: [],
-    },
-  ];
+
   return (
     <div className="exp">
       <h1>Experience</h1>
@@ -132,7 +66,7 @@ const Experience = () => {
       <div>
         {/* <div className="exp_background_line"></div> */}
         <div className="exp_list_area">
-          {all.map((item, key) => {
+          {experience.map((item, key) => {
             return (
               <Item
                 item={item}

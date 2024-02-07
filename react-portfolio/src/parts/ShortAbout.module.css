@@ -1,0 +1,25 @@
+/** @format */
+
+.page {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.page div {
+  width: 80%;
+  border-left: 1rem solid var(--primary-color);
+  background-color: var(--darkgray);
+  color: var(--text);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+.page div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.page div ul li {
+  font-weight: 400;
+  font-size: 0.8rem;
+}

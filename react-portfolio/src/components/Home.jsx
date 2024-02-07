@@ -8,6 +8,10 @@ import WebStoriesIcon from "@mui/icons-material/WebStories";
 import Experience from "./Experience";
 import Skill from "./Skill";
 import Education from "./Education";
+import ShortAbout from "../parts/ShortAbout";
+import ShortSkills from "../parts/ShortSkills";
+import ShortProject from "../parts/ShortProject";
+import ShortExp from "../parts/ShortExp";
 
 const Home = () => {
   return (
@@ -52,9 +56,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Skill />
-      <Education />
-      <Experience />
+      <ShortAbout />
+      <ShortSkills />
+      <ShortProject />
+      <ShortExp />
     </>
   );
 };
