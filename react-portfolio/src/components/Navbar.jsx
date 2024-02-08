@@ -2,57 +2,37 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
-import LightModeIcon from "@mui/icons-material/LightMode";
+import ContrastIcon from "@mui/icons-material/Contrast";
 import { CloseTwoTone, MenuTwoTone } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { Menu } from "@mui/material";
+import colorThemes from "../assets/colorThemes";
 
 const Navbar = () => {
   let [lightMode, setLightMode] = useState(true);
+  let [themesModal, setThemesModal] = useState(false);
   let [listShow, setListShow] = useState(
     window.screen.width > 450 ? true : false
   );
 
-  const handleTheme = () => {
+  const handleTheme = (color) => {
+    const pallete = colorThemes.find((item) => item.name === color);
+    let theme = lightMode ? pallete.light : pallete.dark;
     const root = document.documentElement;
-    if (lightMode) {
-      root.style.setProperty("--primary-blue", "#4a6fd1"); // Lighter primary blue
-      root.style.setProperty("--light-blue", "#86c9ff"); // Lighter light blue
-      root.style.setProperty("--medium-blue", "#5fa1ff"); // Lighter medium blue
-      root.style.setProperty("--dark-blue", "#3a4d78"); // Lighter dark blue
-      root.style.setProperty("--text-light", "#fff");
-      root.style.setProperty("--background", "#1f1f1f"); // Dark background color
-      root.style.setProperty("--black", "#858585");
-      root.style.setProperty(
-        "--background-gradient",
-        "linear-gradient(to bottom, var(--dark-blue) 5%, transparent 95%)"
-      );
-      root.style.setProperty(
-        "--background-gradient-mask",
-        "linear-gradient(to bottom, #3a3a3a 15%, transparent 85%)"
-      );
-      root.style.setProperty("--background-transparent", "#3a3a3a"); // Lighter transparent background
-    } else {
-      root.style.setProperty("--primary-blue", "#3b57f4");
-      root.style.setProperty("--light-blue", "#98e4ff");
-      root.style.setProperty("--medium-blue", "#80b3ff");
-      root.style.setProperty("--dark-blue", "#687eff");
-      root.style.setProperty("--text-light", "#fff");
-      root.style.setProperty("--background", "#fff");
-      root.style.setProperty("--black", "#000");
-      root.style.setProperty(
-        "--background-gradient",
-        "linear-gradient(to bottom, var(--light-blue) 5%, transparent 95%)"
-      );
-      root.style.setProperty(
-        "--background-gradient-mask",
-        "linear-gradient(to bottom, #5e9efd94 15%, transparent 85%)"
-      );
-      root.style.setProperty("--background-transparent", "#5e9efdb4");
-    }
-
-    setLightMode(!lightMode);
+    root.style.setProperty("--primary-color", theme.primaryColor);
+    root.style.setProperty("--secondary-color", theme.secondaryColor);
+    root.style.setProperty("--tertiary-color", theme.tertiaryColor);
+    root.style.setProperty("--dark-primary", theme.darkPrimary);
+    root.style.setProperty("--light-transparent", theme.lightTransparent);
+    root.style.setProperty("--text", theme.text);
+    root.style.setProperty("--background", theme.background);
+    root.style.setProperty("--background-light", theme.backgroundLight);
+    root.style.setProperty("--darktext", theme.darkText);
+    root.style.setProperty("--darkgray", theme.darkGray);
+    root.style.setProperty(
+      "--background-gradient-mask",
+      theme.backgroundGradientMask
+    );
   };
 
   const clickHandler = () => {
@@ -137,10 +117,36 @@ const Navbar = () => {
           </li>
         </ul>
         <div className={styles.navAreaListItem}>
-          {lightMode ? (
-            <DarkModeIcon onClick={handleTheme} />
+          <ContrastIcon onClick={() => setThemesModal(!themesModal)} />
+          {themesModal ? (
+            <div
+              className={styles.themesModal}
+              onClick={() => setThemesModal(false)}>
+              <div>
+                <ul>
+                  <li
+                    style={{ backgroundColor: "#ff8c00" }}
+                    onClick={() => handleTheme("orange")}></li>
+                  <li
+                    style={{ backgroundColor: "#4caf50" }}
+                    onClick={() => handleTheme("green")}></li>
+                  <li
+                    style={{ backgroundColor: "#e53935" }}
+                    onClick={() => handleTheme("red")}></li>
+                  <li
+                    style={{ backgroundColor: "#795548" }}
+                    onClick={() => handleTheme("brown")}></li>
+                  <li
+                    style={{ backgroundColor: "#673ab7" }}
+                    onClick={() => handleTheme("purple")}></li>
+                  <li
+                    style={{ backgroundColor: "#3b57f4" }}
+                    onClick={() => handleTheme("blue")}></li>
+                </ul>
+              </div>
+            </div>
           ) : (
-            <LightModeIcon onClick={handleTheme} />
+            ""
           )}
         </div>
       </div>

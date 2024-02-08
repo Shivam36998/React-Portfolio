@@ -20,8 +20,8 @@ const Home = () => {
         className="home">
         <div className="home_intro_area moving-element move-left">
           <h1 className="text_blue">Hello World!</h1>
-          <h2 className="text_normal">I am Shivam Prajapati</h2>
-          <h3 className="text_blue">Full Stack Developer, Data Analyst</h3>
+          <h1 className="text_normal">I am Shivam Prajapati</h1>
+          <h2 className="text_blue">Full Stack Developer, Data Analyst</h2>
           <p className="text_normal">
             Hi there, I am Shivam, a pre-final year student at IIT BHU striving
             to make my dreams into reality!

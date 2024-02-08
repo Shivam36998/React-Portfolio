@@ -70,6 +70,36 @@
   align-items: center;
 }
 
+.navAreaListItem:last-child {
+  position: relative;
+}
+
+.themesModal {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  z-index: 1;
+}
+.themesModal div {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000c7;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+.themesModal div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.themesModal div ul li {
+  height: 2rem;
+  width: 150px;
+  border-radius: 1rem;
+  z-index: 100;
+}
+
 @media screen and (max-width: 450px) {
   .NavArea {
     height: 100%;

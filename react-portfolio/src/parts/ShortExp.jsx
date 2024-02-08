@@ -7,7 +7,7 @@ import experience from "../assets/experience";
 const Card = ({ item }) => {
   return (
     <div className={styles.card}>
-      <div>{item.company}</div>
+      <h1>{item.company}</h1>
       <div>
         <span>{item.title}</span>
         <span>{item.date}</span>
@@ -20,7 +20,7 @@ const ShortExp = () => {
   return (
     <div className={styles.page}>
       <div className={styles.pagePart}>
-        <h2>Experience</h2>
+        <h1>Experience</h1>
         <h6>
           Bringing a blend of innovation, expertise, and dedication to every
           project, ensuring impactful results

@@ -12,7 +12,7 @@
 }
 .page h2 {
   position: relative;
-  color: black;
+  color: var(--darktext);
 }
 
 @keyframes down {
@@ -42,7 +42,7 @@
   bottom: 0;
   right: 0%;
   height: 2px;
-  background-color: var(--black);
+  background-color: var(--darktext);
   transition: right 0.8s ease;
   animation: down 4s infinite;
 }
@@ -51,6 +51,7 @@
   flex-wrap: wrap;
   width: 80%;
   gap: 20px;
+  justify-content: center;
 }
 .circle {
   height: 90px;
@@ -65,7 +66,5 @@
   font-weight: bold;
   font-size: 0.8rem;
   box-shadow: rgba(50, 50, 93, 0) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0) 0px 30px 60px -30px,
-    rgba(18, 45, 193, 0.57) 0px -2px 6px 0px;
+    rgba(0, 0, 0, 0) 0px 30px 60px -30px, var(--dark-primary) 0px -2px 6px 0px;
 }
-
