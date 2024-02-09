@@ -28,8 +28,7 @@ const About = () => {
               🚀
             </span>{" "}
             <p>
-              Hey there, I'm Shivam Prajapati, a B.Tech student in
-              Pharmaceutical Engineering & Technology at IIT (BHU), and I'm all
+              Hey there, I'm Shivam Prajapati, a B.Tech student at IIT (BHU), and I'm all
               set to graduate in 2025 with a solid CGPA of 8.33. My academic
               journey is a testament to my dedication to learning and growth,
               and I'm thrilled to bring my passion for excellence to the tech

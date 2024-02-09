@@ -36,13 +36,16 @@ const Navbar = () => {
   };
 
   const clickHandler = () => {
-    console.log("here");
     if (window.screen.width < 450) setListShow(false);
   };
 
   return (
     <div className={styles.NavArea}>
-      <div className={styles.sideIcon}>Welcome</div>
+      <div className={styles.sideIcon}>
+        {" "}
+        <img src="../../images/profilebw.png" />
+        Welcome
+      </div>
       <div className={styles.navRightPart}>
         <div
           className={styles.menuIcon}
@@ -123,6 +126,7 @@ const Navbar = () => {
               className={styles.themesModal}
               onClick={() => setThemesModal(false)}>
               <div>
+                Your Vibe, Your Choice
                 <ul>
                   <li
                     style={{ backgroundColor: "#ff8c00" }}

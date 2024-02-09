@@ -71,6 +71,13 @@ const Skill = () => {
                   />
                   <span>Express Js</span>
                 </li>
+                <li className="skill_item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                    alt="BootStrap"
+                  />
+                  <span>BootStrap</span>
+                </li>
               </ul>
             </div>
           </div>

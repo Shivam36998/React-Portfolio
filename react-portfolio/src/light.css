@@ -62,6 +62,9 @@ h3 {
 .text_orange {
   color: rgb(255, 255, 255);
 }
+.bold {
+  font-weight: bold !important;
+}
 
 a {
   text-decoration: none;
@@ -125,6 +128,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   min-height: 100vh;
+  margin-top: 10vh;
 }
 
 .home_intro_area {
@@ -214,6 +218,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 10vh;
 }
 
 .about_upper_row {
@@ -301,6 +306,7 @@ a {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 10vh;
 }
 
 .ed_description {
@@ -436,15 +442,15 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10vh;
+  padding-top: 5vh;
 }
 .exp h1,
 .exp h6 {
   color: var(--darktext);
   margin: 3px 20px;
 }
-.exp h1 {
-  margin-top: 3rem;
-}
+
 .exp_list_area {
   width: 100%;
   display: flex;
@@ -516,6 +522,7 @@ a {
   justify-content: space-around;
   padding: 3vh 0;
   position: relative;
+  margin-top: 10vh;
 }
 
 .skill_heading {
@@ -539,22 +546,25 @@ a {
 
 .skill_list {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .skill_category {
-  width: 90%;
+  width: 40%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--primary-color);
 }
 
 .skill_category:hover {
@@ -566,25 +576,25 @@ a {
 }
 .skill_category div ul {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin: 1rem 3rem;
 }
 .skill_category div ul li {
-  margin: 0 1rem;
+  margin: 1rem;
   display: flex;
   gap: 0.8rem;
 }
 
 .skill_item {
   display: flex;
-  justify-content: space-between;
+  gap: 5rem;
   align-items: center;
   font-weight: bold;
 }
 
 .skill_item img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 .skill_bubble_area {
@@ -671,6 +681,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10vh;
 }
 
 .cancalIcon {
@@ -727,8 +738,6 @@ a {
 
 .projects_area {
   display: flex;
-  height: 60vh;
-  overflow-y: scroll;
   width: 100%;
   flex-wrap: wrap;
   margin: 2rem 0;
@@ -793,15 +802,15 @@ a {
 
 .project_fc {
   position: relative;
-  height: 80%;
-  width: 90%;
-  margin: 2rem;
+  height: 70vh;
+  width: 80vw;
+  margin: 2rem auto;
   background-color: var(--background);
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 6rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.383);
   display: flex;
   justify-content: space-evenly;
+  margin-top: 20vh;
 }
 
 .project_fc_left_div {
@@ -814,7 +823,7 @@ a {
 }
 
 .project_fc_left_div h3 {
-  padding: 0 0 2rem 2rem;
+  padding-left: 2rem;
   font-weight: 400;
 }
 
@@ -831,6 +840,8 @@ a {
   padding: 0.8rem 2.5rem;
   border: 1.5px solid var(--primary-color);
   border-radius: 0.2rem;
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .project_button:hover {
@@ -848,24 +859,24 @@ a {
   box-shadow: 0 1px 2px #000000a2;
 }
 
+.project_tags {
+  padding: 5px 1rem;
+  margin: 1rem;
+  color: var(--dark-primary);
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project_tags li {
+  margin: 0 1rem;
+  list-style-type: square;
+}
 .project_fc_right_div {
   width: 50%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-}
-
-.project_fc_right_div .project_tags {
-  padding: 5px 2rem;
-  margin: 1rem;
-  color: var(--dark-primary);
-  width: 90%;
-  font-size: 0.9rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-.project_fc_right_div .project_tags span {
-  margin: 0 0.3rem;
 }
 
 .project_desc {
@@ -889,6 +900,7 @@ a {
   height: 95vh;
   width: 100vw;
   align-items: center;
+  margin-top: 10vh;
 }
 
 .contact_left_div {
