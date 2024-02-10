@@ -111,7 +111,7 @@ let projects = [
     },
     {
         id: "6",
-        name: "Dice Game",
+        name: "TechRoadMap",
         category: "FrontEnd",
         tags: ["JS", "ReactJs"],
         filters: ["FrontEnd", "HTML", "CSS", "JS", "ReactJs"],
