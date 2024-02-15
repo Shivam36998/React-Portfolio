@@ -173,4 +173,10 @@
     top: 0;
     right: 1rem;
   }
+  .bothLists {
+    gap: 1rem;
+  }
+  .bothLists ul{
+    list-style-type: none;
+  }
 }
