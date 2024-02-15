@@ -9,15 +9,14 @@ import { Menu } from "@mui/material";
 import colorThemes from "../assets/colorThemes";
 
 const Navbar = () => {
-  let [lightMode, setLightMode] = useState(true);
   let [themesModal, setThemesModal] = useState(false);
   let [listShow, setListShow] = useState(
     window.screen.width > 450 ? true : false
   );
 
-  const handleTheme = (color) => {
+  const handleTheme = (color, mode) => {
     const pallete = colorThemes.find((item) => item.name === color);
-    let theme = lightMode ? pallete.light : pallete.dark;
+    let theme = mode == "light" ? pallete.light : pallete.dark;
     const root = document.documentElement;
     root.style.setProperty("--primary-color", theme.primaryColor);
     root.style.setProperty("--secondary-color", theme.secondaryColor);
@@ -43,14 +42,18 @@ const Navbar = () => {
     <div className={styles.NavArea}>
       <div className={styles.sideIcon}>
         {" "}
-        <img src="../../images/profilebw.png" />
+        <div></div>
         Welcome
       </div>
       <div className={styles.navRightPart}>
         <div
           className={styles.menuIcon}
           onClick={() => setListShow(!listShow)}>
-          {listShow ? <CloseTwoTone /> : <MenuTwoTone />}
+          {listShow ? (
+            <CloseTwoTone className={styles.icon} />
+          ) : (
+            <MenuTwoTone className={styles.icon} />
+          )}
         </div>
         <ul
           className={styles.navAreaListItems}
@@ -120,33 +123,60 @@ const Navbar = () => {
           </li>
         </ul>
         <div className={styles.navAreaListItem}>
-          <ContrastIcon onClick={() => setThemesModal(!themesModal)} />
+          <ContrastIcon
+            className={styles.icon}
+            onClick={() => setThemesModal(!themesModal)}
+          />
           {themesModal ? (
             <div
               className={styles.themesModal}
               onClick={() => setThemesModal(false)}>
               <div>
                 Your Vibe, Your Choice
-                <ul>
-                  <li
-                    style={{ backgroundColor: "#ff8c00" }}
-                    onClick={() => handleTheme("orange")}></li>
-                  <li
-                    style={{ backgroundColor: "#4caf50" }}
-                    onClick={() => handleTheme("green")}></li>
-                  <li
-                    style={{ backgroundColor: "#e53935" }}
-                    onClick={() => handleTheme("red")}></li>
-                  <li
-                    style={{ backgroundColor: "#795548" }}
-                    onClick={() => handleTheme("brown")}></li>
-                  <li
-                    style={{ backgroundColor: "#673ab7" }}
-                    onClick={() => handleTheme("purple")}></li>
-                  <li
-                    style={{ backgroundColor: "#3b57f4" }}
-                    onClick={() => handleTheme("blue")}></li>
-                </ul>
+                <span className={styles.bothLists}>
+                  <ul>
+                    <li>Light</li>
+                    <li
+                      style={{ backgroundColor: "#ff8c00" }}
+                      onClick={() => handleTheme("orange", "light")}></li>
+                    <li
+                      style={{ backgroundColor: "#4caf50" }}
+                      onClick={() => handleTheme("green", "light")}></li>
+                    <li
+                      style={{ backgroundColor: "#e53935" }}
+                      onClick={() => handleTheme("red", "light")}></li>
+                    <li
+                      style={{ backgroundColor: "#795548" }}
+                      onClick={() => handleTheme("brown", "light")}></li>
+                    <li
+                      style={{ backgroundColor: "#673ab7" }}
+                      onClick={() => handleTheme("purple", "light")}></li>
+                    <li
+                      style={{ backgroundColor: "#3b57f4" }}
+                      onClick={() => handleTheme("blue", "light")}></li>
+                  </ul>
+                  <ul>
+                    <li>Dark</li>
+                    <li
+                      style={{ backgroundColor: "#ff8c00" }}
+                      onClick={() => handleTheme("orange", "dark")}></li>
+                    <li
+                      style={{ backgroundColor: "#4caf50" }}
+                      onClick={() => handleTheme("green", "dark")}></li>
+                    <li
+                      style={{ backgroundColor: "#e53935" }}
+                      onClick={() => handleTheme("red", "dark")}></li>
+                    <li
+                      style={{ backgroundColor: "#795548" }}
+                      onClick={() => handleTheme("brown", "dark")}></li>
+                    <li
+                      style={{ backgroundColor: "#673ab7" }}
+                      onClick={() => handleTheme("purple", "dark")}></li>
+                    <li
+                      style={{ backgroundColor: "#1a237e" }}
+                      onClick={() => handleTheme("blue", "dark")}></li>
+                  </ul>
+                </span>
               </div>
             </div>
           ) : (

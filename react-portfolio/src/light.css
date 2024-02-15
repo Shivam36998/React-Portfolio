@@ -432,6 +432,7 @@ a {
   color: var(--darktext);
   font-size: 1rem;
   margin-left: 3rem;
+  background-color: var(--background);
   cursor: pointer;
 }
 

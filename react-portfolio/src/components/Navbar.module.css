@@ -25,7 +25,7 @@
   list-style-type: none;
 }
 .navAreaListItem {
-  color: rgb(13, 78, 138);
+  color: var(--darktext);
   text-decoration: none;
   cursor: pointer;
   z-index: 100;
@@ -61,19 +61,22 @@
   text-decoration: underline;
 }
 .sideIcon {
-  color: var(--black);
+  color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   gap: 10px;
-  img {
+  div {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
-    position: relative;
-    object-fit: cover;
-    border: 1px solid #131313;
+    object-fit: contain;
+    border: 1.5px solid var(--primary-color);
+    background-image: url(../../public/images/profilebw.png);
+    background-size: 2.55rem;
+    background-position: center;
+    overflow: hidden;
   }
 }
 
@@ -110,16 +113,24 @@
   font-size: 1.5rem;
   color: white;
 }
-.themesModal div ul {
+.bothLists {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.themesModal div span ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.themesModal div ul li {
+.themesModal div span ul li {
   height: 2rem;
   width: 150px;
   border-radius: 1rem;
   z-index: 100;
+}
+.icon {
+  color: var(--primary-color) !important;
 }
 
 @media screen and (max-width: 450px) {
@@ -132,11 +143,11 @@
     position: absolute;
     right: 0;
     top: 2.5rem;
-    background-color: whitesmoke;
+    background-color: var(--primary-color);
     margin: 1rem 1rem;
     padding: 1rem 3rem;
     z-index: 100;
-    color: var(--primary-color);
+    color: var(--darktext) !important;
   }
   .navAreaListItem a {
     color: var(--text-light);

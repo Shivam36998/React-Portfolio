@@ -24,21 +24,40 @@ const Footer = () => {
             <Link to={"/project"}>Project</Link>
           </span>
           <span>
+            <Link to={"/project"}>Experience</Link>
+          </span>
+          <span>
             <Link to={"/contact"}>Contact</Link>
           </span>
         </div>
         <div className="footer_navigation_links">
           <span>
-            <Link to={"/"}>LinkedIn</Link>
+            <a
+              href={"https://www.linkedin.com/in/shivam-prajapati-66ba92226/"}
+              target="_blank">
+              LinkedIn
+            </a>
           </span>
           <span>
-            <Link to={"/"}>GitHub</Link>
+            <a
+              href={"https://github.com/Shivam36998"}
+              target="_blank">
+              GitHub
+            </a>
           </span>
           <span>
-            <Link to={"/"}>Instagram</Link>
+            <a
+              href={"https://www.instagram.com/shivamprajapati__7/"}
+              target="_blank">
+              Instagram
+            </a>
           </span>
           <span>
-            <Link to={"/"}>X</Link>
+            <a
+              href={"https://twitter.com/gunehgar__7"}
+              target="_blank">
+              X
+            </a>
           </span>
         </div>
       </div>

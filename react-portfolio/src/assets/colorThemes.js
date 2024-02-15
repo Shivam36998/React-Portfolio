@@ -16,16 +16,16 @@ const colorThemes = [
         },
         dark: {
             primaryColor: "#ff8c00",
-            secondaryColor: "#ffcc80",
-            tertiaryColor: "#ff8c00e3",
-            darkPrimary: "#e07e00",
-            lightTransparent: "#ffcc80a8",
-            text: "#f0f0f0",
-            background: "#ffe5b4",
-            darkText: "#131313",
-            backgroundLight: "#fff8eb",
-            darkGray: "#2a2a2a",
-            backgroundGradientMask: "linear-gradient(to bottom, #ffcc80 15%, transparent 85%)",
+            secondaryColor: "#ffa54f",
+            tertiaryColor: "#ff8c00a5",
+            darkPrimary: "#ff7200",
+            lightTransparent: "#ffa54fa8",
+            text: "#ececec",
+            background: "#1a1a1a", // Dark gray background
+            darkText: "#f0f0f0",
+            backgroundLight: "#222",
+            darkGray: "#7f8c9b",
+            backgroundGradientMask: "linear-gradient(to bottom, #ffa54f 15%, transparent 85%)",
         },
     },
     {
@@ -44,17 +44,17 @@ const colorThemes = [
             backgroundGradientMask: "linear-gradient(to bottom, #8bc34a 15%, transparent 85%)",
         },
         dark: {
-            primaryColor: "#388e3c",
-            secondaryColor: "#689f38",
-            tertiaryColor: "#388e3ce3",
-            darkPrimary: "#2a6d2e",
-            lightTransparent: "#689f38a8",
-            text: "#f0f0f0",
-            background: "#33691e",
+            primaryColor: "#4caf50",
+            secondaryColor: "#66bb6a",
+            tertiaryColor: "#4caf50a5",
+            darkPrimary: "#43a047",
+            lightTransparent: "#66bb6aa8",
+            text: "#ececec",
+            background: "#1a1a1a", // Dark gray background
             darkText: "#f0f0f0",
-            backgroundLight: "#254415",
-            darkGray: "#f0f0f0",
-            backgroundGradientMask: "linear-gradient(to bottom, #689f38 15%, transparent 85%)",
+            backgroundLight: "#222",
+            darkGray: "#7f8c9b",
+            backgroundGradientMask: "linear-gradient(to bottom, #66bb6a 15%, transparent 85%)",
         },
     },
     {
@@ -73,17 +73,17 @@ const colorThemes = [
             backgroundGradientMask: "linear-gradient(to bottom, #f44336 15%, transparent 85%)",
         },
         dark: {
-            primaryColor: "#c62828",
-            secondaryColor: "#d32f2f",
-            tertiaryColor: "#c62828e3",
-            darkPrimary: "#8a1c1a",
-            lightTransparent: "#d32f2fa8",
-            text: "#f0f0f0",
-            background: "#b71c1c",
+            primaryColor: "#e53935",
+            secondaryColor: "#f44336",
+            tertiaryColor: "#e53935a5",
+            darkPrimary: "#c62828",
+            lightTransparent: "#f44336a8",
+            text: "#ececec",
+            background: "#1a1a1a", // Dark gray background
             darkText: "#f0f0f0",
-            backgroundLight: "#8a1c1c",
-            darkGray: "#f0f0f0",
-            backgroundGradientMask: "linear-gradient(to bottom, #d32f2f 15%, transparent 85%)",
+            backgroundLight: "#222",
+            darkGray: "#7f8c9b",
+            backgroundGradientMask: "linear-gradient(to bottom, #f44336 15%, transparent 85%)",
         },
     },
     {
@@ -102,17 +102,17 @@ const colorThemes = [
             backgroundGradientMask: "linear-gradient(to bottom, #8d6e63 15%, transparent 85%)",
         },
         dark: {
-            primaryColor: "#5d4037",
-            secondaryColor: "#6d4c41",
-            tertiaryColor: "#5d4037e3",
-            darkPrimary: "#3e2723",
-            lightTransparent: "#6d4c41a8",
-            text: "#f0f0f0",
-            background: "#212121",
+            primaryColor: "#795548",
+            secondaryColor: "#8d6e63",
+            tertiaryColor: "#795548a5",
+            darkPrimary: "#5d4037",
+            lightTransparent: "#8d6e63a8",
+            text: "#ececec",
+            background: "#1a1a1a", // Dark gray background
             darkText: "#f0f0f0",
-            backgroundLight: "#1a1a1a",
-            darkGray: "#f0f0f0",
-            backgroundGradientMask: "linear-gradient(to bottom, #6d4c41 15%, transparent 85%)",
+            backgroundLight: "#222",
+            darkGray: "#7f8c9b",
+            backgroundGradientMask: "linear-gradient(to bottom, #8d6e63 15%, transparent 85%)",
         },
     },
     {
@@ -131,17 +131,17 @@ const colorThemes = [
             backgroundGradientMask: "linear-gradient(to bottom, #9c27b0 15%, transparent 85%)",
         },
         dark: {
-            primaryColor: "#512da8",
-            secondaryColor: "#6a1b9a",
-            tertiaryColor: "#512da8e3",
-            darkPrimary: "#38006b",
-            lightTransparent: "#6a1b9aa8",
-            text: "#f0f0f0",
-            background: "#1a237e",
+            primaryColor: "#673ab7",
+            secondaryColor: "#9575cd",
+            tertiaryColor: "#673ab7a5",
+            darkPrimary: "#512da8",
+            lightTransparent: "#9575cda8",
+            text: "#ececec",
+            background: "#1a1a1a", // Dark gray background
             darkText: "#f0f0f0",
-            backgroundLight: "#121858",
-            darkGray: "#f0f0f0",
-            backgroundGradientMask: "linear-gradient(to bottom, #6a1b9a 15%, transparent 85%)",
+            backgroundLight: "#222",
+            darkGray: "#7f8c9b",
+            backgroundGradientMask: "linear-gradient(to bottom, #9575cd 15%, transparent 85%)",
         },
     },
     {
@@ -160,18 +160,18 @@ const colorThemes = [
             backgroundGradientMask: "linear-gradient(to bottom, #80b3ff 15%, transparent 85%)",
         },
         dark: {
-            primaryColor: "#3b57f4",
-            secondaryColor: "#80b3ff",
-            tertiaryColor: "#3b57f4e3",
-            darkPrimary: "#687eff",
-            lightTransparent: "#5b73fba8",
-            text: "#f0f0f0",
-            background: "whitesmoke",
-            darkText: "#131313",
-            backgroundLight: "#f9f9f9",
-            darkGray: "#2a2a2a",
-            backgroundGradientMask: "linear-gradient(to bottom, #80b3ff 15%, transparent 85%)",
-        },
+            primaryColor: "#7f8c9b", // Lighter primary color
+            secondaryColor: "#a5b5c4", // Lighter secondary color
+            tertiaryColor: "#7f8c9ba5", // Lighter tertiary color
+            darkPrimary: "#6e7d8f", // Lighter dark primary color
+            lightTransparent: "#a5b5c466", // Lighter light transparent color
+            text: "#f0f0f0", // Lighter text color
+            background: "#2c3e50", // Same background color as previous
+            darkText: "#131313", // Darker dark text color
+            backgroundLight: "#0585b3", // Same background light color as previous
+            darkGray: "#2a2a2a", // Same dark gray color as previous
+            backgroundGradientMask: "linear-gradient(to bottom, #a5b5c4 15%, transparent 85%)", // Lighter gradient start color
+        }
     },
 ];
 
