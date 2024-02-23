@@ -1,9 +1,11 @@
 /** @format */
 
 import React, { useState } from "react";
-import CancelIcon from "@mui/icons-material/Cancel";
 import { useNavigate } from "react-router-dom";
 import projects from "../assets/projects";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
 
 const Projects = () => {
   const filters = [
@@ -61,18 +63,47 @@ const Projects = () => {
       taglist += filters[i];
       taglist += " ";
     }
-    let [title, setTitle] = useState("");
     return (
-      <div
-        className="project_card moving-element move-left"
-        onMouseEnter={() => setTitle(name)}
-        onMouseLeave={() => setTitle("")}>
-        <div className="project_card_title">{title}</div>
+      <div className="project_card moving-element move-left">
+        <div className="project_card_hidden">
+          <div className="project_card_icons">
+            <a
+              href={code}
+              target="_blank"
+              rel="noopener noreferrer">
+              <span>
+                <GitHubIcon />
+                Code
+              </span>
+            </a>
+
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer">
+              <span>
+                <LanguageIcon />
+                Live
+              </span>
+            </a>
+
+            <span onClick={() => passCardData(props.item)}>
+              <FullscreenIcon />
+              More
+            </span>
+          </div>
+          <div className="project_card_tags">
+            {tags.slice(0, 8).map((tg, ind) => {
+              return <span>{tg}</span>;
+            })}
+          </div>
+        </div>
         <img
           onClick={() => passCardData(props.item)}
           className="project_card_front_image"
           src={frontImage}
         />
+        <div className="project_card_title">{name}</div>
       </div>
     );
   };

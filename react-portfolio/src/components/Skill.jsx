@@ -1,8 +1,21 @@
 /** @format */
 
 import React from "react";
+import { useEffect } from "react";
 
 const Skill = () => {
+  
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    setTimeout(scrollToTop, 200);
+  }, []);
+
   return (
     <div
       id="skill"

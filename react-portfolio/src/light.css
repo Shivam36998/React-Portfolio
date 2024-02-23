@@ -1,6 +1,42 @@
 /** @format */
 
 :root {
+  --primary-color: #2e7d4c;
+  --secondary-color: #252323;
+  --tertiary-color: #2e7d4ce3;
+  --dark-primary: #1d7041;
+  --light-transparent: #e74c3ca8;
+  --text: #ffffff;
+  --background: #1f3028;
+  --darktext: #ffffff;
+  --background-light: #e67e22;
+  --darkgray: #161b22;
+  --background-gradient-mask: linear-gradient(
+    to bottom,
+    #2e7d4c 15%,
+    transparent 85%
+  );
+}
+
+/* :root {
+  --primary-color: #2e7d4c;
+  --secondary-color: #4caf50;
+  --tertiary-color: #2e7d4ce3;
+  --dark-primary: #1d7041;
+  --light-transparent: #4caf50a8;
+  --text: #f0f0f0;
+  --background: whitesmoke;
+  --darktext: #131313;
+  --background-light: #0585b3;
+  --darkgray: #2a2a2a;
+  --background-gradient-mask: linear-gradient(
+    to bottom,
+    #4caf50 15%,
+    transparent 85%
+  );
+} */
+
+/* :root {
   --primary-color: #3b57f4;
   --secondary-color: #80b3ff;
   --tertiary-color: #3b57f4e3;
@@ -16,7 +52,8 @@
     #80b3ff 15%,
     transparent 85%
   );
-}
+} */
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&family=Poppins:wght@200;300&display=swap");
 * {
@@ -749,36 +786,102 @@ a {
 }
 
 .project_card {
-  border-radius: 3px;
+  border-radius: 1rem;
   background-color: transparent;
   width: 28%;
   height: 200px;
   padding: 0 4px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
   cursor: pointer;
+  position: relative;
 }
 
+.project_card_hidden {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+}
+
+.project_card_icons {
+  padding-left: 9rem;
+  padding-right: 1rem;
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  border-radius: 1.1rem 1.1rem 0 0;
+  display: flex;
+  justify-content: space-around;
+  span {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    gap: 0.6rem;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text);
+    svg {
+      font-size: 2.5rem !important;
+    }
+  }
+}
+
+.project_card_tags {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  font-size: 13px;
+  color: var(--text);
+  span {
+    margin: 0 0.3rem;
+  }
+}
 .project_card_front_image {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
   width: 100%;
   height: 100%;
   object-fit: fill;
+  border-radius: 1rem;
+  transition: 0.8s ease-in-out;
 }
 
-.project_card_title {
-  color: var(--darktext);
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
+.project_card:hover .project_card_title {
+  border-top: 1px solid var(--text);
 }
 
 .project_card:hover .project_card_front_image {
-  transform: scale(0.7);
-  filter: blur(10%);
+  height: 7rem;
+  width: 7rem;
+  padding-top: 0.6rem;
+  padding-left: 0.6rem;
+  filter: invert();
+  box-shadow: rgba(93, 162, 236, 0.17) 0px -23px 25px 0px inset,
+    rgba(25, 72, 153, 0.15) 0px -36px 30px 0px inset,
+    rgba(196, 42, 42, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px inset, rgba(219, 32, 32, 0.09) 0px 4px 2px,
+    rgba(12, 47, 78, 0.09) 0px 8px 4px, rgba(24, 158, 17, 0.09) 0px 16px 8px,
+    rgba(13, 120, 113, 0.09) 0px 32px 16px;
+}
+
+.project_card_title {
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: var(--primary-color);
+  padding: 4px 0;
+  border-radius: 0 0 1rem 1rem;
+  transition: 0.8s ease-in-out;
 }
 
 .project_all_button {
@@ -829,8 +932,8 @@ a {
 }
 
 .project_button_box {
-  padding: 2rem;
-  padding-top: 0;
+  margin: 0rem;
+  padding-top: 0.7rem;
   display: flex;
   justify-content: space-between;
 }
@@ -838,11 +941,13 @@ a {
 .project_button {
   font-size: 1.2rem;
   font-weight: 500;
-  padding: 0.8rem 2.5rem;
+  padding: 0.8rem 2rem;
   border: 1.5px solid var(--primary-color);
   border-radius: 0.2rem;
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: transparent;
+  color: var(--darktext);
+  display: flex;
+  gap: 1rem;
 }
 
 .project_button:hover {
@@ -865,26 +970,35 @@ a {
   margin: 1rem;
   color: var(--dark-primary);
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
 }
 .project_tags li {
   margin: 0 1rem;
   list-style-type: square;
+  min-width: 100px;
 }
 .project_fc_right_div {
   width: 50%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  h1 {
+    color: var(--primary-color);
+  }
 }
 
 .project_desc {
   font-size: 1rem;
-  height: 250px;
+  /* height: 250px; */
   max-height: calc(75% * 1);
   overflow: scroll;
+  padding: 1rem 1.5rem;
+  list-style: none;
+  li {
+    margin: 0.3rem 1rem;
+  }
 }
 
 .project_fc_right_div .readme_link {
@@ -997,4 +1111,66 @@ a {
   text-align: center;
   font-size: 1rem;
   width: 100%;
+}
+
+.socials-container {
+  width: 300px !important;
+  height: 4.5rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px 40px;
+  background-color: var(--background);
+  border-radius: 5px;
+}
+.social {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgb(194, 194, 194);
+}
+.twitter:hover {
+  background: linear-gradient(45deg, #66757f, #00acee, #36daff, #dbedff);
+}
+.facebook:hover {
+  background: linear-gradient(45deg, #134ac0, #316ff6, #78a3ff);
+}
+.google-plus:hover {
+  background: linear-gradient(45deg, #872419, #db4a39, #ff7061);
+}
+.instagram:hover {
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.social svg {
+  fill: white;
+  height: 20px;
 }

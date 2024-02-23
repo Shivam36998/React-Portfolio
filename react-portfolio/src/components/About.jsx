@@ -1,12 +1,20 @@
 /** @format */
 
-import React from "react";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import EmailIcon from "@mui/icons-material/Email";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import React, {useEffect} from "react";
+import SocialCard from "../parts/SocialPallete";
 
 const About = () => {
+   useEffect(() => {
+     const scrollToTop = () => {
+       window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+       });
+     };
+
+     setTimeout(scrollToTop, 200);
+   }, []);
+
   return (
     <div
       id="about"
@@ -28,15 +36,15 @@ const About = () => {
               🚀
             </span>{" "}
             <p>
-              Hey there, I'm Shivam Prajapati, a B.Tech student at IIT (BHU), and I'm all
-              set to graduate in 2025 with a solid CGPA of 8.33. My academic
-              journey is a testament to my dedication to learning and growth,
-              and I'm thrilled to bring my passion for excellence to the tech
-              realm.
+              Hey there, I'm Shivam Prajapati, a B.Tech student at IIT (BHU),
+              and I'm all set to graduate in 2025 with a solid CGPA of 8.33. My
+              academic journey is a testament to my dedication to learning and
+              growth, and I'm thrilled to bring my passion for excellence to the
+              tech realm.
             </p>
-            </div>
+          </div>
 
-            <div>
+          <div>
             <span
               role="img"
               aria-label="rocket">
@@ -51,8 +59,8 @@ const About = () => {
               subtle qualities like a hardworking ethos, unwavering dedication,
               and effective communication and teamwork skills.
             </p>
-            </div>
-            <div>
+          </div>
+          <div>
             <span
               role="img"
               aria-label="rocket">
@@ -67,8 +75,8 @@ const About = () => {
               a fervor for Full Stack Web Development, Backend Development, and
               the intriguing field of Data analysis.
             </p>
-            </div>
-            <div>
+          </div>
+          <div>
             <span
               role="img"
               aria-label="rocket">
@@ -96,7 +104,8 @@ const About = () => {
               </div>
             </div>
             <div className="about_lower_second_row">
-              <div>
+              <SocialCard />
+              {/* <div>
                 <a
                   href=""
                   className="social_media_icons">
@@ -130,7 +139,7 @@ const About = () => {
                   className="social_media_icons">
                   <InstagramIcon />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

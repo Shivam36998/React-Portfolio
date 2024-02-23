@@ -15,12 +15,17 @@ let projects = [
             "jsonwebtoken",
         ],
         filters: ["FrontEnd", "HTML", "CSS", "JS", "ReactJs"],
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe
-            dolores tenetur nisi pariatur natus hic deserunt ut. Reiciendis,
-            iure soluta aliquid fugit accusamus voluptate a deserunt facilis
-            perspiciatis dolorem distinctio dignissimos nulla itaque suscipit
-            aut aliquam. Minus recusandae, quidem magni perferendis, maiores
-            vitae esse nam fugit nulla laborum et?`,
+        description: [
+            'Full-stack development expertise applied to a freelance project',
+            'Creation of both client and admin panels tailored for only desktop usage',
+            'Functionality prioritized over visual aesthetics for optimal performance',
+            'Admin role involves bulk uploading of audio files with precise access control',
+            'Comprehensive user and project management functionalities in the admin panel',
+            'Implementation of active/inactive features for both users and projects',
+            'Dynamic data tables offering flexibility, allowing the admin to decide displayed columns',
+            'Detailed tracking system records login IDs, audio play counts, and user comments',
+            'The project specifically designed for efficient audio file management, user access restrictions, and detailed usage analytics.'
+        ],
         code: "https://github.com/Shivam36998/crm",
         ReadmeLink: "",
         link: "https://crm-client-navy.vercel.app/",
@@ -33,17 +38,12 @@ let projects = [
         category: "Backend",
         tags: ["NodeJs", "Express Js", "Mongoose"],
         filters: [""],
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe
-            dolores tenetur nisi pariatur natus hic deserunt ut. Reiciendis,
-            iure soluta aliquid fugit accusamus voluptate a deserunt facilis
-            perspiciatis dolorem distinctio dignissimos nulla itaque suscipit
-            aut aliquam. Minus recusandae, quidem magni perferendis, maiores
-            vitae esse nam fugit nulla laborum et?`,
+        description: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe dolores tenetur nisi pariatur natus hic deserunt ut.Reiciendis, iure soluta aliquid fugit accusamus voluptate a deserunt facilis perspiciatis dolorem distinctio'],
         code: "https://github.com/Shivam36998/JagritiWebsite-backend",
-        ReadmeLink: "",
-        link: "https://jagritissc.com/",
-        frontImage: "/projectImage/jagriti.png",
-        images: [],
+            ReadmeLink: "",
+            link: "https://jagritissc.com/",
+            frontImage: "/projectImage/jagriti.png",
+            images: [],
     },
     {
         id: "3",
@@ -61,12 +61,7 @@ let projects = [
             "Mongoose",
         ],
         filters: ["FrontEnd", "HTML", "CSS", "JS", "ReactJs"],
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe
-            dolores tenetur nisi pariatur natus hic deserunt ut. Reiciendis,
-            iure soluta aliquid fugit accusamus voluptate a deserunt facilis
-            perspiciatis dolorem distinctio dignissimos nulla itaque suscipit
-            aut aliquam. Minus recusandae, quidem magni perferendis, maiores
-            vitae esse nam fugit nulla laborum et?`,
+        description: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe'],
         code: "https://github.com/Shivam36998/text-tango",
         ReadmeLink: "",
         link: "",
@@ -79,12 +74,7 @@ let projects = [
         category: "FrontEnd",
         tags: ["HTML", "CSS", "JS", "ReactJs", "Firebase"],
         filters: ["FrontEnd", "HTML", "CSS", "JS", "ReactJs"],
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe
-            dolores tenetur nisi pariatur natus hic deserunt ut. Reiciendis,
-            iure soluta aliquid fugit accusamus voluptate a deserunt facilis
-            perspiciatis dolorem distinctio dignissimos nulla itaque suscipit
-            aut aliquam. Minus recusandae, quidem magni perferendis, maiores
-            vitae esse nam fugit nulla laborum et?`,
+        description: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe,'],
         code: "https://github.com/Shivam36998/sinfolix-stickyNotes",
         ReadmeLink: "",
         link: "",
@@ -93,20 +83,15 @@ let projects = [
     },
     {
         id: "5",
-        name: "Dice Game",
+        name: "Spirit (IIT BHU)",
         category: "FrontEnd",
         tags: ["HTML", "CSS", "JS", "ReactJs"],
         filters: ["FrontEnd", "HTML", "CSS", "JS", "ReactJs"],
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe
-            dolores tenetur nisi pariatur natus hic deserunt ut. Reiciendis,
-            iure soluta aliquid fugit accusamus voluptate a deserunt facilis
-            perspiciatis dolorem distinctio dignissimos nulla itaque suscipit
-            aut aliquam. Minus recusandae, quidem magni perferendis, maiores
-            vitae esse nam fugit nulla laborum et?`,
-        code: "https://github.com/Shivam36998/dice-game",
+        description: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe'],
+        code: "https://github.com/Shivam36998/spirit-24",
         ReadmeLink: "",
         link: "",
-        frontImage: "/projectImage/dice.png",
+        frontImage: "/projectImage/spirit.png",
         images: [],
     },
     {
@@ -115,12 +100,7 @@ let projects = [
         category: "FrontEnd",
         tags: ["JS", "ReactJs"],
         filters: ["FrontEnd", "HTML", "CSS", "JS", "ReactJs"],
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe
-            dolores tenetur nisi pariatur natus hic deserunt ut. Reiciendis,
-            iure soluta aliquid fugit accusamus voluptate a deserunt facilis
-            perspiciatis dolorem distinctio dignissimos nulla itaque suscipit
-            aut aliquam. Minus recusandae, quidem magni perferendis, maiores
-            vitae esse nam fugit nulla laborum et?`,
+        description: ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed saepe'],
         code: "https://github.com/Shivam36998/techroadmap",
         ReadmeLink: "",
         link: "https://techroadmap.vercel.app/",

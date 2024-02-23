@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, {useEffect} from "react";
 import IconCards from "../bits/IconCards";
 import CallIcon from "@mui/icons-material/Call";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
@@ -10,9 +10,21 @@ import ShortSkills from "../parts/ShortSkills";
 import ShortProject from "../parts/ShortProject";
 import ShortExp from "../parts/ShortExp";
 import { useNavigate } from "react-router-dom";
+import HireButton from "../parts/HireButton";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    setTimeout(scrollToTop, 200);
+  }, []);
   return (
     <>
       <div
@@ -60,6 +72,7 @@ const Home = () => {
       <ShortSkills />
       <ShortProject />
       <ShortExp />
+      <HireButton />
     </>
   );
 };

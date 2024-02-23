@@ -11,7 +11,9 @@ const ShortProject = () => {
     <div className={styles.page}>
       <div className={styles.row}>
         <h2>PortFolio Highlights</h2>
-        <span onClick={() => navigate("/project")}>(See More)</span>
+        <span onClick={() => navigate("/project")}>
+          <div>More</div>
+        </span>
       </div>
 
       <div className={styles.list}>
@@ -27,13 +29,17 @@ const ShortProject = () => {
                   alt=""
                 />
               </div>
-              <div className={styles.name}>{item.name}
-              <span> Click to see Details</span>
-             </div>
+              <div className={styles.name}>
+                {item.name}
+                <span> Click to see Details</span>
+              </div>
             </div>
           );
         })}
       </div>
+      <span className={styles.bottom} onClick={() => navigate("/project")}>
+        <div>More</div>
+      </span>
     </div>
   );
 };

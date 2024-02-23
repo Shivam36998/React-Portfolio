@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Education = () => {
   let [tran, setTran] = useState(0);
@@ -25,11 +25,11 @@ const Education = () => {
       <h3 className="text_normal"> St. Xavier's Sr. Sec. School</h3>
       <p className="text_normal"> Police Line Road, Kannauj</p>
       <h2 className="text_white"> Percentage - 96.2%</h2>
-      <p className="text_normal">
+      <h3 className="text_normal">
         {" "}
         Subjects :- Maths, Science, Information Technology, English, Hindi,
         Social Science
-      </p>
+      </h3>
     </>
   );
 
@@ -39,11 +39,11 @@ const Education = () => {
       <h3 className="text_normal"> St. Xavier's Sr. Sec. School</h3>
       <p className="text_normal"> Police Line Road, Kannauj</p>
       <h2 className="text_white"> Percentage - 95.2%</h2>
-      <p className="text_normal">
+      <h3 className="text_normal">
         {" "}
         Subjects :- Maths, Physics, Chemistry, Information Technology, English,
         Physical Education
-      </p>
+      </h3>
     </>
   );
 
@@ -52,10 +52,10 @@ const Education = () => {
       <h1 className="text_orange"> Bachelor Of Technology </h1>
       <h3 className="text_normal"> Indian Institute of Technology, Varanasi</h3>
       <h2 className="text_white"> CGPA :- 8.33</h2>
-      <p className="text_normal">
+      <h3 className="text_normal">
         {" "}
         Branch - Pharmaceutical Engineering and Technology
-      </p>
+      </h3>
     </>
   );
 
@@ -66,6 +66,18 @@ const Education = () => {
       setFull(0);
     }
   };
+
+    useEffect(() => {
+      const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+
+      setTimeout(scrollToTop, 200);
+    }, []);
+
 
   return (
     <div

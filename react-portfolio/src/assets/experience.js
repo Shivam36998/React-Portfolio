@@ -21,8 +21,25 @@ const experience = [
     },
     {
         title: "Full Stack Developer",
+        company: "Dhruv Research",
+        date: "Dec 2023 - Jan 2024",
+        description: [
+            "Managed the development of the Client Audio Manager project, overseeing both admin and clientpanels.",
+            "Implemented features in the admin panel to facilitate CSV - based project uploads, manage file statuses, activate users and projects, and set play limits on audio files.",
+            "Within the client panel, users accessed audio files, added comments, and downloaded descriptions.The system meticulously tracked interactions, including comments, audio plays, and user logins."
+        ],
+        links: [
+            { text: "Website", link: "" },
+            { text: "Certificate", link: "" },
+        ],
+        projects: [
+            { text: "CRM", link: "" },
+        ],
+    },
+    {
+        title: "Full Stack Developer",
         company: "Jagriti, IIT BHU",
-        date: "January 2023 - present",
+        date: "January 2024 - present",
         description: [
             "Headed a 4-member team for the Jagriti college fest website, showcasing leadership.",
             " Managed backend operations, emphasizing CRUD functionalities for robust data management.",

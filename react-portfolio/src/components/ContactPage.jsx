@@ -1,10 +1,21 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 const ContactPage = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    setTimeout(scrollToTop, 200);
+  }, []);
+
   return (
     <div
       id="contact"
@@ -88,7 +99,15 @@ const ContactPage = () => {
             id="subject"
             className="contact_formtextbox text_normal"
           />
-          <button className="contact_send_message" onClick={()=>alert("server glitch, try contacting on instagram @shivamprajapati__7")}>Send Message</button>
+          <button
+            className="contact_send_message"
+            onClick={() =>
+              alert(
+                "server glitch, try contacting on instagram @shivamprajapati__7"
+              )
+            }>
+            Send Message
+          </button>
         </form>
       </div>
     </div>

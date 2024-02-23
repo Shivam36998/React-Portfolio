@@ -9,18 +9,68 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 98%;
+  h2 {
+    color: var(--dark-primary);
+  }
+}
+@keyframes slider {
+  from {
+    left: 0;
+  }
+  50% {
+    left: 49%;
+  }
+  to {
+    left: 0%;
+  }
 }
 .row {
   span {
     color: var(--tertiary-color);
     cursor: pointer;
+    width: 12rem;
+    background-color: var(--primary-color);
+    border-radius: 1.5rem;
+    position: relative;
+    height: 3rem;
+    div {
+      padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+      border-radius: 1.5rem;
+      background-color: var(--text);
+      width: fit-content;
+      position: absolute;
+      height: 3rem;
+      animation: slider 2s infinite;
+      font-weight: 900;
+    }
+  }
+}
+.bottom {
+  display: none;
+  color: var(--tertiary-color);
+  cursor: pointer;
+  width: 12rem;
+  background-color: var(--primary-color);
+  border-radius: 1.5rem;
+  position: relative;
+  height: 3rem;
+  padding-top: 0.5rem;
+  div {
+    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--text);
+    width: fit-content;
+    position: absolute;
+    height: 3rem;
+    animation: slider 2s infinite;
+    font-weight: 900;
   }
 }
 .list {
@@ -84,9 +134,19 @@
   padding: 0.2rem 1rem;
 }
 
-@media screen and (max-width : 630px) {
-    .card{
-        width: 100%;
-        max-width: 100%;
-    }
+@media screen and (max-width: 630px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .row span {
+    display: none;
+  }
+  .bottom {
+    display: block;
+  }
 }

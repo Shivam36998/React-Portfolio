@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import CancelIcon from "@mui/icons-material/Cancel";
-import { Category } from "@mui/icons-material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const SingleProject = () => {
@@ -42,21 +43,30 @@ const SingleProject = () => {
       </div>
       <div className="project_fc_right_div">
         <h1>Description</h1>
-        <p
+        <ul
           id="projectDesc"
           className="project_desc text_normal">
-          {description}
-        </p>
+          {description.map((des, index) => (
+            <li>👉{des}</li>
+          ))}
+        </ul>
         <div className="project_button_box">
           <a
             href={link}
             target="_blank">
-            <button className="project_button text_normal">Live</button>
+            <button className="project_button text_normal">
+              {" "}
+              <GitHubIcon />
+              Live
+            </button>
           </a>
           <a
             href={code}
             target="_blank">
-            <button className="project_button text_normal">View Code</button>
+            <button className="project_button text_normal">
+              <LanguageIcon />
+              View Code
+            </button>
           </a>
           {/* <p className="readme_link"> */}
           {/* <a href="">Read Full Documentation</a> */}

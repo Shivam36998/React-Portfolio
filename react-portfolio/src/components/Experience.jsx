@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, {useEffect} from "react";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import experience from "../assets/experience";
 
@@ -55,6 +55,16 @@ const Item = ({ item }) => {
 };
 
 const Experience = () => {
+  useEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+    setTimeout(scrollToTop, 200);
+  }, []);
 
   return (
     <div className="exp">

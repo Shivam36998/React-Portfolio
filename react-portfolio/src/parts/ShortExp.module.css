@@ -16,11 +16,12 @@
   width: 40%;
   flex-direction: column;
 }
-.pagePart:first-child h1{
+.pagePart:first-child h1 {
   color: var(--darktext);
 }
 .pagePart:first-child h6 {
-  width: 80%;
+  width: 95%;
+  margin-top: 1rem;
   color: var(--tertiary-color);
 }
 
@@ -40,6 +41,7 @@
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 2rem 1rem;
+  cursor: pointer;
 }
 .card div,
 .card h1 {
