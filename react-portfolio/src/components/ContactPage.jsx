@@ -34,7 +34,7 @@ const ContactPage = () => {
           </button>
           <button className="resume_button">
             <a
-              href="https://drive.google.com/file/d/11qF561lM9bV_id4bIOznv2TX3CoFeWQ2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1JLecJ3tV9JvqQ2DLyBEGFWJfLF5Xp94i/view?usp=sharing"
               target="_blank">
               Download Resume
             </a>
@@ -51,24 +51,22 @@ const ContactPage = () => {
           <IconCards
             icon={<GitHub />}
             text={"Github"}
-            link={
-              "https://drive.google.com/file/d/1znHWJS6fgoGC4rj9tWQb257wpH4Orzd0/view?usp=sharing"
-            }
+            link={"https://github.com/Shivam36998"}
           />
           <IconCards
             icon={<LinkedInIcon />}
             text={"LinkedIn"}
-            link="/project"
+            link="https://www.linkedin.com/in/shivam-prajapati-66ba92226/"
           />
           <IconCards
             icon={<InstagramIcon />}
             text={"Instagram"}
-            link="/project"
+            link="https://www.instagram.com/shivamprajapati__7/"
           />
           <IconCards
             icon={<TwitterIcon />}
             text={"(X)"}
-            link="/project"
+            link="https://twitter.com/gunehgar__7"
           />
         </div>
         <div className="cont_agency_block">
