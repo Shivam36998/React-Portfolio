@@ -62,9 +62,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footerLastLine">
-        copyright@gunehgar__7 :: made with ❤️ by Shivam Prajapati
-      </div>
+      {/* <div className="footerLastLine"> */}
+      {/* copyright@gunehgar__7 :: made with ❤️ by Shivam Prajapati */}
+      {/* </div> */}
     </div>
   );
 };

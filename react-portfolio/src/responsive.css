@@ -69,7 +69,7 @@
   .home_intro_area p {
     width: 100%;
   }
-  .home_intro_area h1{
+  .home_intro_area h1 {
     font-size: 30px;
   }
   .home_icons {
@@ -198,8 +198,28 @@
     flex-direction: column;
     justify-content: space-between;
     height: auto;
-    padding: 3rem 0;
     gap: 3rem;
+
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+  .contact_upper_div {
+    padding-top: 4rem;
+    background-color: var(--background);
+  }
+  .cont_first_row {
+    flex-direction: column;
+    align-items: center;
+    button {
+      height: 3rem;
+      padding: 0 1rem;
+      width: max-content;
+      a {
+        font-size: 1rem;
+      }
+    }
   }
   .contact_left_div {
     width: 90%;
@@ -211,28 +231,26 @@
   .contact_right_div {
     width: 100%;
     height: auto;
+
+    .contact_social_media {
+      gap: 1.5rem;
+      flex-direction: column;
+      height: 400px;
+      align-items: center;
+      align-content: center;
+      padding: 0 2rem;
+      a:first-of-type {
+        margin-top: 6vh;
+      }
+    }
+    .cont_agency_block {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
   }
-  .contact_mail_button,
-  .resume_button,
-  .contact_send_message {
-    margin: 0;
-    padding: 4px;
-    font-size: 1.15rem;
-  }
-  .resume_button,
-  .contact_send_message {
-    padding: 10px;
-  }
-  .contact_social_media {
-    align-items: center;
-  }
-  .contact_right_div {
-    width: 100%;
-  }
-  .contact_right_div form {
-    width: 90%;
-    margin: auto;
-  }
+
   .footer {
     flex-direction: column;
   }
