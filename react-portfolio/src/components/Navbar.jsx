@@ -34,6 +34,10 @@ const Navbar = () => {
     );
   };
 
+  useEffect(()=>{
+    handleTheme("orange", "light");
+  }, [])
+
   const clickHandler = () => {
     if (window.screen.width < 450) setListShow(false);
   };
