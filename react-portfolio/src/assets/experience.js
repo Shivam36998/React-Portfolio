@@ -1,8 +1,26 @@
 const experience = [
     {
         title: "Full Stack Developer",
+        company: "Techkilla",
+        date: "March 2023 - Present",
+        description: [
+            "Engaged in swapping photos within templates, gaining insights into image manipulation and design frameworks.",
+            "Collaborated on refining photo-swapping processes, optimizing efficiency and user experience.",
+            "Demonstrated adaptability and proficiency in specialized photo-swapping technology overall at Gen AI."
+        ],
+        links: [
+            { text: "Website", link: "https://techkilla.com/" },
+            { text: "Offer Letter", link: "" },
+        ],
+        projects: [
+            { text: "Pheonix", link: "https://pheonix-live.vercel.app/" },
+            { text: "SnapShawt", link: "" },
+        ],
+    },
+    {
+        title: "Full Stack Developer",
         company: "Sinfolix Technologies",
-        date: "Decemeber 2023 - present",
+        date: "Decemeber 2023 - March 2023",
         description: [
             "Two-phase internship showcased adaptability and proficiency in diverse tech stacks",
             "Active contribution to projects (notes app, chat app) in the     initial phase, exploring technologies like Socket.IO, Toastify, and Redux.",
@@ -33,7 +51,7 @@ const experience = [
             { text: "Certificate", link: "" },
         ],
         projects: [
-            { text: "CRM", link: "" },
+            { text: "CRM", link: "https://audioconnect.in" },
         ],
     },
     {
