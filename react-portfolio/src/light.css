@@ -35,7 +35,7 @@
     transparent 85%
   );
 } */
-
+/*
 @media screen and (max-width: 630px) {
   :root {
     --primary-color: #feffff;
@@ -54,7 +54,7 @@
       transparent 85%
     );
   }
-}
+} */
 /* :root {
   --primary-color: #2e7d4c;
   --secondary-color: #4caf50;
@@ -532,9 +532,8 @@ a {
   margin: 1rem;
   border-radius: 1rem;
   border-radius: 22px;
-background: linear-gradient(145deg, #1e1e1e, #232323);
-box-shadow:  5px 5px 10px #1e1e1e,
-             -5px -5px 10px #242424;
+  background: linear-gradient(145deg, #1e1e1e, #232323);
+  box-shadow: 5px 5px 10px #1e1e1e, -5px -5px 10px #242424;
   width: 90%;
 }
 .exp_card_second_row {
@@ -817,8 +816,7 @@ box-shadow:  5px 5px 10px #1e1e1e,
   position: relative;
   border-radius: 22px;
   background: linear-gradient(145deg, #1e1e1e, #232323);
-  box-shadow:  5px 5px 10px #1e1e1e,
-             -5px -5px 10px #242424;
+  box-shadow: 5px 5px 10px #1e1e1e, -5px -5px 10px #242424;
 }
 
 .project_card_hidden {
@@ -1119,8 +1117,10 @@ box-shadow:  5px 5px 10px #1e1e1e,
 /* footer */
 .footer {
   display: flex;
-  color: var(--text-light);
-  background-color: var(--dark-primary);
+  color: var(--primary-color);
+  background-color: var(--background);
+  border-top: 0.5px solid var(--text);
+  margin-top: 3rem;
   /* padding: 3px 0; */
 }
 .footer_row {
