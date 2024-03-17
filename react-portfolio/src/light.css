@@ -1,6 +1,24 @@
 /** @format */
 
 :root {
+  --primary-color: #ab8a15;
+  --secondary-color: #feefff;
+  --tertiary-color: #feeeff;
+  --dark-primary: #ffffff;
+  --light-transparent: #4cafe7a8;
+  --text: #ffffff;
+  --background: #2a2a2a;
+  --darktext: #ffffff;
+  --background-light: #5a5a5a;
+  --darkgray: #161b22;
+  --background-gradient-mask: linear-gradient(
+    to bottom,
+    #6a6a6a 15%,
+    transparent 85%
+  );
+}
+
+/* :root {
   --primary-color: #2e7d4c;
   --secondary-color: #252323;
   --tertiary-color: #2e7d4ce3;
@@ -16,12 +34,13 @@
     #2e7d4c 15%,
     transparent 85%
   );
-}
+} */
+
 @media screen and (max-width: 630px) {
   :root {
-    --primary-color: #3b57f4;
-    --secondary-color: #80b3ff;
-    --tertiary-color: #3b57f4e3;
+    --primary-color: #feffff;
+    --secondary-color: #feefff;
+    --tertiary-color: #feeeff;
     --dark-primary: #687eff;
     --light-transparent: #5b73fba8;
     --text: #f0f0f0;
@@ -93,11 +112,11 @@ h3 {
 }
 
 .text_white {
-  color: var(--text-light) !important;
+  color: var(--text) !important;
 }
 
 .text_orange {
-  color: rgb(255, 255, 255);
+  color: var(--primary-color);
 }
 .bold {
   font-weight: bold !important;
@@ -105,7 +124,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--text);
 }
 
 .social_media_icons {
@@ -383,7 +402,7 @@ a {
 
 .ed_edFullBox {
   width: 30%;
-  background-color: var(--dark-primary);
+  background-color: var(--background);
   border-radius: 1rem;
   padding: 1rem 2rem;
   margin: 0 auto;
@@ -392,9 +411,9 @@ a {
   justify-content: center;
   gap: 0.8rem;
   height: 20rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background: #212121;
+  background: linear-gradient(145deg, #232323, #1e1e1e);
+  box-shadow: 10px 10px 20px #111111, -10px -10px 20px #313131;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -508,13 +527,14 @@ a {
   color: var(--dark-primary);
 }
 .exp_card {
-  background-color: var(--dark-primary);
+  background-color: var(--background);
   padding: 1rem 2rem;
   margin: 1rem;
   border-radius: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 22px;
+background: linear-gradient(145deg, #1e1e1e, #232323);
+box-shadow:  5px 5px 10px #1e1e1e,
+             -5px -5px 10px #242424;
   width: 90%;
 }
 .exp_card_second_row {
@@ -546,7 +566,7 @@ a {
 }
 .exp_links {
   margin: 0 5px;
-  color: var(--text-light);
+  color: var(--text);
   font-size: 1rem;
 }
 /* Skill styles using variables */
@@ -795,6 +815,10 @@ a {
   display: flex;
   cursor: pointer;
   position: relative;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #1e1e1e, #232323);
+  box-shadow:  5px 5px 10px #1e1e1e,
+             -5px -5px 10px #242424;
 }
 
 .project_card_hidden {
@@ -802,7 +826,7 @@ a {
   height: 100%;
   position: absolute;
   z-index: -1;
-  background-color: var(--primary-color);
+  background-color: var(--background);
   border-radius: 1rem;
 }
 
@@ -878,7 +902,7 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--background);
   padding: 4px 0;
   border-radius: 0 0 1rem 1rem;
   transition: 0.8s ease-in-out;

@@ -21,7 +21,7 @@ const Education = () => {
 
   const HighSchool = (
     <>
-      <h1 className="text_orange"> High School </h1>
+      <h1 className="text_normal"> High School </h1>
       <h3 className="text_normal"> St. Xavier's Sr. Sec. School</h3>
       <p className="text_normal"> Police Line Road, Kannauj</p>
       <h2 className="text_white"> Percentage - 96.2%</h2>
